@@ -233,7 +233,29 @@ button {
 }
 
 .nav-icon {
-    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-icon img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: var(--transition-base);
+    filter: grayscale(100%);
+}
+
+.nav-link:hover .nav-icon img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.nav-link.active .nav-icon img {
+    opacity: 1;
+    filter: grayscale(0%) brightness(0) saturate(100%) invert(12%) sepia(90%) saturate(6234%) hue-rotate(355deg) brightness(95%) contrast(111%);
 }
 
 .nav-text {
@@ -474,8 +496,21 @@ button {
 }
 
 .kpi-icon {
-    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-icon img {
+    width: 40px;
+    height: 40px;
     filter: grayscale(20%);
+    transition: all 0.3s ease;
+}
+
+.kpi-card:hover .kpi-icon img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
 }
 
 .kpi-content {
@@ -616,12 +651,14 @@ button {
 
 .issue-card {
     position: relative;
+    padding-right: 100px; /* Extra space for severity badge */
 }
 
 .issue-severity {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
+    z-index: 10;
 }
 
 .severity-badge {
@@ -633,6 +670,7 @@ button {
     text-transform: uppercase;
     background-color: var(--medium-gray);
     color: var(--dark-gray);
+    white-space: nowrap;
 }
 
 .issue-meta {

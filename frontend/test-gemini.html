@@ -268,12 +268,12 @@
         </div>
     </div>
 
+    <!-- Load environment first -->
+    <script src="env-loader.js"></script>
+    <script src="js/config.js"></script>
+    
     <script>
-        const CONFIG = {
-            GEMINI_API_KEY: 'AIzaSyBDkLxMoFkoJ4s1M2bPDehZylALkaALuEE',
-            GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
-        };
-
+        // Use CONFIG from config.js instead of hardcoded values
         const examples = {
             1: "Eres un analista de ÖBB (Austrian Federal Railways). Analiza estos datos de feedback de clientes: Satisfacción general 72%, Puntualidad mejoró 12% en rutas Viena-Salzburgo, Quejas sobre conectividad de app móvil aumentaron 23% en horas pico, WiFi mejoró 18%. Genera un insight profesional de máximo 2 oraciones.",
             2: "Genera un resumen ejecutivo breve sobre tendencias de transporte ferroviario en Austria basado en: 2,547 comentarios de clientes, 8 problemas activos, temas principales son puntualidad, app móvil, WiFi y estaciones.",

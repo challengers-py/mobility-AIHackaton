@@ -2,34 +2,26 @@
 // ÖBB Mobility Insights Dashboard - Main JS
 // ========================================
 
-// Configuration
-const CONFIG = {
-    API_BASE_URL: 'http://localhost:8000', // Update with your FastAPI backend URL
-    GEMINI_API_KEY: 'AIzaSyBDkLxMoFkoJ4s1M2bPDehZylALkaALuEE',
-    GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
-};
+// Configuration is now loaded from config.js
+// Make sure to load env-loader.js and config.js before this file
 
 // ========================================
 // AI Hot Topic Banner Functionality
 // ========================================
 
-// Helper function to load JSON data from backend
+// Helper function to load JSON data from local file
 async function loadJSONData() {
     try {
-        // TODO: Update these URLs to match your FastAPI backend endpoints
-        const [sentimentData, topicsData, issuesData] = await Promise.all([
-            fetch(`${CONFIG.API_BASE_URL}/api/sentiment-over-time`).then(r => r.json()).catch(() => null),
-            fetch(`${CONFIG.API_BASE_URL}/api/topics`).then(r => r.json()).catch(() => null),
-            fetch(`${CONFIG.API_BASE_URL}/api/emerging-issues`).then(r => r.json()).catch(() => null)
-        ]);
-
-        return {
-            sentiment: sentimentData,
-            topics: topicsData,
-            issues: issuesData
-        };
+        // Load from local data.json file
+        const response = await fetch('public/data.json');
+        if (!response.ok) {
+            throw new Error('Failed to load data.json');
+        }
+        const data = await response.json();
+        console.log('✅ Data loaded from data.json:', data);
+        return data;
     } catch (error) {
-        console.warn('Could not load JSON data from backend, using mock data');
+        console.warn('Could not load data.json, using mock data:', error);
         return null;
     }
 }
@@ -38,48 +30,58 @@ async function loadHotTopic() {
     const hotTopicText = document.getElementById('hotTopicText');
     const hotTopicTimestamp = document.getElementById('hotTopicTimestamp');
 
-    // Add loading class
-    hotTopicText.classList.add('loading');
-    hotTopicText.textContent = 'Loading AI-generated insights...';
-
     try {
-        // Step 1: Try to load data from your backend JSON files
+        // Step 1: Load data from JSON file
         const jsonData = await loadJSONData();
         
         // Step 2: Prepare data summary for Gemini
         let dashboardData;
         
-        if (jsonData && jsonData.sentiment) {
-            // Use real data from backend
+        if (jsonData && jsonData.status === 'success') {
+            // Calculate statistics from real data
+            const totalMentions = jsonData.statistics.reduce((sum, cat) => sum + cat.total_mentions, 0);
+            const delaysData = jsonData.statistics.find(cat => cat.category === 'delays');
+            const comfortData = jsonData.statistics.find(cat => cat.category === 'comfort');
+            
+            // Get top issues from data
+            const topIssues = jsonData.data.slice(0, 10).map(item => item.subject);
+            
             dashboardData = {
-                totalFeedback: 2547, // Extract from your actual data
-                avgSentiment: 72,
-                activeIssues: jsonData.issues ? jsonData.issues.length : 8,
-                topTopics: jsonData.topics ? jsonData.topics.slice(0, 4).map(t => t.name) : ['Punctuality', 'Mobile App'],
-                recentTrends: 'Punctuality improved 12% on Vienna-Salzburg routes. Mobile app complaints increased 23% during peak hours.'
+                totalFeedback: jsonData.total_rows_processed,
+                totalMentions: totalMentions,
+                delaysMentions: delaysData ? delaysData.total_mentions : 0,
+                comfortMentions: comfortData ? comfortData.total_mentions : 0,
+                categories: jsonData.statistics.map(s => `${s.category}: ${s.total_mentions}`).join(', '),
+                topIssues: topIssues.slice(0, 3).join('; ')
             };
         } else {
-            // Use mock data if backend is not available
+            // Fallback mock data
             dashboardData = {
-                totalFeedback: 2547,
-                avgSentiment: 72,
-                activeIssues: 8,
-                topTopics: ['Punctuality', 'Mobile App', 'WiFi Service', 'Station Facilities'],
-                recentTrends: 'Punctuality improved 12% on Vienna-Salzburg routes. Mobile app complaints increased 23% during peak hours.'
+                totalFeedback: 5000,
+                totalMentions: 5370,
+                delaysMentions: 1727,
+                comfortMentions: 505,
+                categories: 'delays: 1727, comfort: 505, service: 313',
+                topIssues: 'Train delays; Service quality; Infrastructure issues'
             };
         }
 
         // Step 3: Create prompt for Gemini
-        const prompt = `You are an AI analyst for ÖBB (Austrian Federal Railways). Based on the following customer feedback data, generate ONE concise hot topic insight (max 2 sentences) highlighting the most important finding of the week:
+        const prompt = `You are an AI analyst for ÖBB (Austrian Federal Railways). Based on the following customer feedback data from ${dashboardData.totalFeedback} entries analyzed, generate ONE concise insight (max 2 sentences, under 150 characters) highlighting the most critical finding.
 
-Data Summary:
-- Total Feedback: ${dashboardData.totalFeedback} entries
-- Average Sentiment: ${dashboardData.avgSentiment}% positive
-- Active Issues: ${dashboardData.activeIssues}
-- Top Topics: ${dashboardData.topTopics.join(', ')}
-- Recent Trends: ${dashboardData.recentTrends}
+Key Data:
+- Total mentions across categories: ${dashboardData.totalMentions}
+- Delays mentioned: ${dashboardData.delaysMentions} times (most critical issue)
+- Comfort issues: ${dashboardData.comfortMentions} mentions
+- Top concerns: ${dashboardData.topIssues}
 
-Generate a professional, actionable insight that combines positive and concerning trends. Start directly with the insight, no introduction needed.`;
+IMPORTANT RULES:
+- DO NOT use any emojis or emoticons
+- Use only plain text
+- Be direct, actionable and professional
+- Focus on the delays issue
+
+Generate your insight now:`;
 
         // Step 4: Call Gemini API
         const response = await fetch(CONFIG.GEMINI_API_URL, {
@@ -108,7 +110,6 @@ Generate a professional, actionable insight that combines positive and concernin
 
         // Update the banner
         hotTopicText.textContent = generatedText;
-        hotTopicText.classList.remove('loading');
 
         // Update timestamp
         const now = new Date();
@@ -123,16 +124,15 @@ Generate a professional, actionable insight that combines positive and concernin
     } catch (error) {
         console.error('Error loading hot topic:', error);
         
-        // Fallback to mock data if API fails
-        hotTopicText.textContent = '⚠️ Customer satisfaction with punctuality improved by 12% this week on Vienna-Salzburg routes, while mobile app connectivity issues during peak hours show a 23% increase in complaints requiring immediate attention.';
-        hotTopicText.classList.remove('loading');
+        // Fallback to data-driven message (without emojis)
+        hotTopicText.textContent = 'Train delays represent 32% of all customer feedback (1,727 mentions), making punctuality the top priority issue requiring immediate attention across all routes.';
         
         const now = new Date();
         const timeString = now.toLocaleTimeString('en-US', { 
             hour: '2-digit', 
             minute: '2-digit' 
         });
-        hotTopicTimestamp.textContent = `Updated ${timeString} (Fallback mode)`;
+        hotTopicTimestamp.textContent = `Updated ${timeString} (Offline mode)`;
     }
 }
 
@@ -190,55 +190,511 @@ function initNavigation() {
 }
 
 // ========================================
-// Load Data from Backend
+// Load Data from JSON and Display
 // ========================================
 
 async function loadDashboardData() {
     try {
-        // TODO: Implement actual API calls to your FastAPI backend
-        // Example endpoints:
-        // - /api/sentiment-over-time
-        // - /api/topics
-        // - /api/emerging-issues
-        // - /api/recommendations
+        const jsonData = await loadJSONData();
+        
+        if (jsonData && jsonData.status === 'success') {
+            console.log('✅ Loading real data from data.json');
+            loadRealKPIData(jsonData);
+            loadTopicsData(jsonData);
+            loadIssuesData(jsonData);
+            loadSentimentData(jsonData);
+            loadRecommendations(jsonData);
+        } else {
+            console.warn('⚠️ Using mock data');
+            loadMockKPIData();
+        }
 
         // Update last updated timestamp
         const lastUpdatedElement = document.getElementById('lastUpdated');
         if (lastUpdatedElement) {
             const now = new Date();
-            lastUpdatedElement.textContent = now.toLocaleString();
+            lastUpdatedElement.textContent = now.toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
         }
-
-        // Load mock data for demonstration
-        loadMockKPIData();
 
     } catch (error) {
         console.error('Error loading dashboard data:', error);
+        loadMockKPIData();
     }
 }
 
 // ========================================
-// Load Mock KPI Data (Replace with Real Data)
+// Load Real KPI Data from JSON
+// ========================================
+
+function loadRealKPIData(jsonData) {
+    // Calculate total mentions
+    const totalMentions = jsonData.statistics.reduce((sum, cat) => sum + cat.total_mentions, 0);
+    
+    // Get total processed items
+    const totalProcessed = jsonData.pagination?.total_items || jsonData.total_rows_processed || 5000;
+    
+    // Get category counts for all categories
+    const serviceCount = jsonData.statistics.find(s => s.category === 'service')?.total_mentions || 0;
+    const delaysCount = jsonData.statistics.find(s => s.category === 'delays')?.total_mentions || 0;
+    const infrastructureCount = jsonData.statistics.find(s => s.category === 'infrastructure')?.total_mentions || 0;
+    const usuarioCount = jsonData.statistics.find(s => s.category === 'usuario')?.total_mentions || 0;
+    const hygieneCount = jsonData.statistics.find(s => s.category === 'hygiene')?.total_mentions || 0;
+    const comfortCount = jsonData.statistics.find(s => s.category === 'comfort')?.total_mentions || 0;
+    const uncategorized = jsonData.statistics.find(s => s.category === 'sin_categoria')?.total_mentions || 0;
+    
+    // Calculate ACTIVE ISSUES based on severity thresholds
+    // Issue is "active" if it exceeds critical thresholds:
+    // - Critical (High Priority): > 1000 mentions
+    // - Warning (Medium Priority): > 400 mentions  
+    // - Active (Low Priority): > 200 mentions
+    let activeIssuesCount = 0;
+    const issuesBreakdown = [];
+    
+    // Evaluate all categories dynamically
+    const allCategories = [
+        { name: 'service', count: serviceCount },
+        { name: 'delays', count: delaysCount },
+        { name: 'infrastructure', count: infrastructureCount },
+        { name: 'usuario', count: usuarioCount },
+        { name: 'hygiene', count: hygieneCount },
+        { name: 'comfort', count: comfortCount }
+    ];
+    
+    allCategories.forEach(cat => {
+        if (cat.count > 1000) {
+            activeIssuesCount++;
+            issuesBreakdown.push({ category: cat.name, level: 'CRITICAL', mentions: cat.count });
+        } else if (cat.count > 400) {
+            activeIssuesCount++;
+            issuesBreakdown.push({ category: cat.name, level: 'WARNING', mentions: cat.count });
+        } else if (cat.count > 200) {
+            activeIssuesCount++;
+            issuesBreakdown.push({ category: cat.name, level: 'ACTIVE', mentions: cat.count });
+        }
+    });
+    
+    // Consider uncategorized as an issue if it's more than 20% of total
+    if (uncategorized > totalProcessed * 0.2) {
+        activeIssuesCount++;
+        issuesBreakdown.push({ category: 'uncategorized', level: 'WARNING', mentions: uncategorized });
+    }
+    
+    console.log('📊 Active Issues Breakdown:', issuesBreakdown);
+    
+    // Calculate sentiment (all feedback represents complaints/issues)
+    // High Impact Negative: delays, service (critical operational issues)
+    // Medium Impact Negative: infrastructure, hygiene (maintenance issues)
+    // Low Impact Negative: comfort (convenience issues)
+    // Neutral: usuario (user error, not ÖBB's fault)
+    const highImpactNegative = delaysCount + serviceCount;
+    const mediumImpactNegative = infrastructureCount + hygieneCount;
+    const lowImpactNegative = comfortCount;
+    const neutralCategories = usuarioCount;
+    const totalCategorized = jsonData.statistics.filter(s => s.category !== 'sin_categoria')
+        .reduce((sum, s) => sum + s.total_mentions, 0);
+    
+    // Since all feedback is complaints, sentiment score represents issue severity distribution
+    // Lower score = more severe issues
+    const sentimentScore = Math.round((100 - ((highImpactNegative / totalCategorized) * 100)));
+    
+    // Update KPI cards
+    document.querySelector('#kpiTotalFeedback .kpi-value').textContent = 
+        totalProcessed.toLocaleString();
+    
+    document.querySelector('#kpiAvgSentiment .kpi-value').textContent = 
+        `${sentimentScore}%`;
+    
+    document.querySelector('#kpiActiveIssues .kpi-value').textContent = 
+        activeIssuesCount;
+    
+    document.querySelector('#kpiTopTopics .kpi-value').textContent = 
+        totalMentions.toLocaleString();
+
+    // Update overview summary with active issues details
+    const criticalIssues = issuesBreakdown.filter(i => i.level === 'CRITICAL');
+    const warningIssues = issuesBreakdown.filter(i => i.level === 'WARNING');
+    
+    // Find top category
+    const topCategory = allCategories.sort((a, b) => b.count - a.count)[0];
+    const topCategoryPercent = Math.round((topCategory.count / totalMentions) * 100);
+    
+    let issuesSummary = `<strong class="text-negative">${activeIssuesCount} active issue${activeIssuesCount !== 1 ? 's' : ''}</strong> require attention`;
+    if (criticalIssues.length > 0) {
+        issuesSummary += ` (${criticalIssues.length} critical)`;
+    }
+    
+    const uncategorizedPercent = Math.round((uncategorized / totalProcessed) * 100);
+    
+    const processingTime = jsonData.processing_time ? jsonData.processing_time.toFixed(4) : '0.00';
+    
+    document.getElementById('overviewSummary').innerHTML = `
+        <p>This analysis covers <strong>${totalProcessed.toLocaleString()} customer feedback entries</strong> processed in ${processingTime} seconds, identifying <strong>${totalMentions.toLocaleString()} categorized mentions</strong> across <strong>7 categories</strong>.</p>
+        <p>The most critical issue is <strong class="text-negative">${topCategory.name} with ${topCategory.count.toLocaleString()} mentions (${topCategoryPercent}%)</strong>, representing the primary concern for ÖBB customers.</p>
+        <p>${issuesSummary}, primarily related to ${issuesBreakdown.slice(0, 3).map(i => i.category).join(', ')}. <strong class="text-warning">${uncategorized.toLocaleString()} feedback entries (${uncategorizedPercent}%)</strong> remain uncategorized.</p>
+    `;
+}
+
+// ========================================
+// Load Topics Data
+// ========================================
+
+function loadTopicsData(jsonData) {
+    const topicsContainer = document.getElementById('topicsContainer');
+    
+    // Filter out 'sin_categoria' and sort by mentions
+    const categorizedStats = jsonData.statistics
+        .filter(s => s.category !== 'sin_categoria')
+        .sort((a, b) => b.total_mentions - a.total_mentions);
+    
+    // Calculate total for percentages
+    const totalCategorized = categorizedStats.reduce((sum, s) => sum + s.total_mentions, 0);
+    
+    // Clear container
+    topicsContainer.innerHTML = '';
+    
+    // Create topic cards
+    categorizedStats.forEach(stat => {
+        const percentage = ((stat.total_mentions / totalCategorized) * 100).toFixed(1);
+        const categoryName = stat.category.charAt(0).toUpperCase() + stat.category.slice(1);
+        
+        // Assign colors based on severity
+        let colorClass = 'text-neutral';
+        if (stat.category === 'delays') colorClass = 'text-negative';
+        else if (stat.category === 'infrastructure') colorClass = 'text-warning';
+        else if (stat.category === 'service') colorClass = 'text-warning';
+        
+        const card = document.createElement('div');
+        card.className = 'insight-card';
+        card.innerHTML = `
+            <h4 class="card-subtitle">${categoryName}</h4>
+            <p class="sentiment-percentage ${colorClass}" style="font-size: 2rem; margin: 0.5rem 0;">
+                ${stat.total_mentions.toLocaleString()}
+            </p>
+            <p style="color: var(--dark-gray); font-size: 0.875rem;">
+                ${percentage}% of categorized feedback
+            </p>
+        `;
+        topicsContainer.appendChild(card);
+    });
+}
+
+// ========================================
+// Helper: Translate Spanish subjects to English
+// ========================================
+
+function translateSubject(subject) {
+    const translations = {
+        // Service issues
+        'trato poco amable por parte del personal de control': 'unfriendly treatment by control staff',
+        'dudas sobre la tarjeta de descuento': 'questions about discount card',
+        'problemas con billete para perro': 'problems with pet ticket',
+        'problemas al comprar el billete online': 'problems buying ticket online',
+        'información poco clara del servicio de objetos perdidos': 'unclear information from lost and found service',
+        'una propuesta para mejorar la plataforma de venta de billetes': 'proposal to improve ticket sales platform',
+        'información contradictoria entre web y app': 'contradictory information between web and app',
+        'dudas sobre viajes escolares': 'questions about school trips',
+        'una duda sobre reembolso del billete': 'question about ticket refund',
+        'la zona reservada para silla de ruedas estaba ocupada': 'wheelchair reserved area was occupied',
+        
+        // Delays issues
+        'una sugerencia para mejorar la información sobre retrasos': 'suggestion to improve delay information',
+        'un retraso causado por problemas técnicos en el tren': 'delay caused by technical problems',
+        'un retraso debido al embarque lento por exceso de pasajeros': 'delay due to slow boarding from excess passengers',
+        'un retraso causado por una avería en la vía': 'delay caused by track failure',
+        'un retraso de más de 30 minutos pese a que se había informado puntualidad': 'delay of more than 30 minutes despite punctuality notification',
+        'información contradictoria sobre el retraso': 'contradictory information about delay',
+        'una duda sobre compensación por retraso': 'question about delay compensation',
+        
+        // Infrastructure issues
+        'calefacción averiada': 'broken heating system',
+        'las guías táctiles estaban dañadas': 'tactile guides were damaged',
+        'una sugerencia para añadir más espacios para bicicletas': 'suggestion to add more bicycle spaces',
+        'una escalera mecánica de la estación averiada': 'broken station escalator',
+        'normas de transporte de bicicletas poco claras': 'unclear bicycle transport rules',
+        'baños sucios o averiados': 'dirty or broken bathrooms',
+        
+        // Hygiene issues
+        'ventanas sucias': 'dirty windows',
+        'zonas resbaladizas en el andén': 'slippery areas on platform',
+        'papeleras sin vaciar': 'unemptied trash bins',
+        
+        // Comfort issues
+        'un asiento reservado ocupado por otra persona': 'reserved seat occupied by another person',
+        'aire acondicionado funcionando solo en algunos vagones': 'air conditioning working only in some cars',
+        
+        // Usuario issues
+        'haber perdido una cartera': 'lost wallet',
+        'haber perdido un cochecito infantil': 'lost baby stroller',
+        
+        // Uncategorized
+        'la rampa para silla de ruedas no estaba disponible': 'wheelchair ramp not available',
+        'la cancelación del tren por condiciones meteorológicas': 'train cancellation due to weather conditions',
+        'el botón de emergencia no funcionaba': 'emergency button not working',
+        'una propuesta para mejorar la accesibilidad': 'proposal to improve accessibility',
+        'falta de ayuda para personas con movilidad reducida': 'lack of assistance for people with reduced mobility',
+        'falta de anuncios en la estación': 'lack of announcements at station',
+        'la altura del tren hacía difícil subir sin ayuda': 'train height made boarding difficult without help',
+        'señalización confusa': 'confusing signage',
+        'una solicitud de compensación rechazada': 'compensation request rejected',
+        'confusión sobre zonas tarifarias': 'confusion about fare zones'
+    };
+    
+    return translations[subject] || subject;
+}
+
+// ========================================
+// Load Issues Data
+// ========================================
+
+function loadIssuesData(jsonData) {
+    const issuesContainer = document.getElementById('issuesContainer');
+    
+    // Use statistics data for real mention counts
+    // Sort categories by total mentions and exclude uncategorized
+    const sortedCategories = jsonData.statistics
+        .filter(stat => stat.category !== 'sin_categoria')
+        .sort((a, b) => b.total_mentions - a.total_mentions)
+        .slice(0, 6); // Get top 6 categories
+    
+    // Clear container
+    issuesContainer.innerHTML = '';
+    
+    // Create issue cards based on real category statistics
+    sortedCategories.forEach((stat, index) => {
+        // Determine severity based on mention count thresholds
+        let severity = 'Medium';
+        let severityColor = 'background-color: var(--warning);';
+        
+        if (stat.total_mentions > 1000) {
+            severity = 'Critical';
+            severityColor = 'background-color: var(--negative);';
+        } else if (stat.total_mentions > 600) {
+            severity = 'High';
+            severityColor = 'background-color: var(--negative);';
+        } else if (stat.total_mentions > 400) {
+            severity = 'Medium';
+            severityColor = 'background-color: var(--warning);';
+        } else {
+            severity = 'Low';
+            severityColor = 'background-color: var(--neutral);';
+        }
+        
+        // Get sample subjects from this category and translate them
+        const categorySamples = jsonData.data
+            .filter(item => item.detected_categories.includes(stat.category))
+            .slice(0, 3)
+            .map(item => translateSubject(item.subject));
+        
+        // Format category name
+        const categoryName = stat.category.charAt(0).toUpperCase() + stat.category.slice(1);
+        
+        // Create description with examples
+        let description = `${stat.total_mentions.toLocaleString()} mentions detected across all feedback.`;
+        if (categorySamples.length > 0) {
+            description += ` Common issues: ${categorySamples.slice(0, 2).join(', ')}.`;
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'insight-card issue-card';
+        card.innerHTML = `
+            <div class="issue-severity">
+                <span class="severity-badge" style="${severityColor} color: white;">
+                    ${severity}
+                </span>
+            </div>
+            <h3 class="card-title" style="text-transform: capitalize;">${categoryName} Issues</h3>
+            <p class="card-content" style="font-size: 0.875rem; color: var(--dark-gray);">
+                ${description}
+            </p>
+            <div class="issue-meta">
+                <span class="issue-count">${stat.total_mentions.toLocaleString()} mentions</span>
+                <span class="issue-trend" style="color: var(--negative);">↑ ${Math.round((stat.total_mentions / jsonData.statistics.reduce((sum, s) => sum + s.total_mentions, 0)) * 100)}% of total</span>
+            </div>
+        `;
+        issuesContainer.appendChild(card);
+    });
+}
+
+// ========================================
+// Load Sentiment Data
+// ========================================
+
+function loadSentimentData(jsonData) {
+    // Calculate sentiment distribution
+    const totalMentions = jsonData.statistics
+        .filter(s => s.category !== 'sin_categoria')
+        .reduce((sum, s) => sum + s.total_mentions, 0);
+    
+    const serviceCount = jsonData.statistics.find(s => s.category === 'service')?.total_mentions || 0;
+    const delaysCount = jsonData.statistics.find(s => s.category === 'delays')?.total_mentions || 0;
+    const infrastructureCount = jsonData.statistics.find(s => s.category === 'infrastructure')?.total_mentions || 0;
+    const usuarioCount = jsonData.statistics.find(s => s.category === 'usuario')?.total_mentions || 0;
+    const hygieneCount = jsonData.statistics.find(s => s.category === 'hygiene')?.total_mentions || 0;
+    const comfortCount = jsonData.statistics.find(s => s.category === 'comfort')?.total_mentions || 0;
+    
+    // ALL feedback represents complaints and issues (no positive feedback)
+    // Categorize by severity impact:
+    // High Severity: delays, service, infrastructure (critical operational problems)
+    // Medium Severity: hygiene, comfort (quality/maintenance issues)
+    // Low Severity: usuario (user error, not ÖBB's direct fault)
+    const highSeverity = delaysCount + serviceCount + infrastructureCount;
+    const mediumSeverity = hygieneCount + comfortCount;
+    const lowSeverity = usuarioCount;
+    
+    const highPercent = ((highSeverity / totalMentions) * 100).toFixed(1);
+    const mediumPercent = ((mediumSeverity / totalMentions) * 100).toFixed(1);
+    const lowPercent = ((lowSeverity / totalMentions) * 100).toFixed(1);
+    
+    // Update sentiment percentages (now representing severity levels)
+    document.querySelector('#sentimentNegative .sentiment-percentage').textContent = `${highPercent}%`;
+    document.querySelector('#sentimentNeutral .sentiment-percentage').textContent = `${mediumPercent}%`;
+    document.querySelector('#sentimentPositive .sentiment-percentage').textContent = `${lowPercent}%`;
+}
+
+// ========================================
+// Load Mock KPI Data (Fallback)
 // ========================================
 
 function loadMockKPIData() {
     // Update KPI cards with mock data
-    document.querySelector('#kpiTotalFeedback .kpi-value').textContent = '2,547';
-    document.querySelector('#kpiAvgSentiment .kpi-value').textContent = '72%';
-    document.querySelector('#kpiActiveIssues .kpi-value').textContent = '8';
-    document.querySelector('#kpiTopTopics .kpi-value').textContent = '15';
+    document.querySelector('#kpiTotalFeedback .kpi-value').textContent = '5,000';
+    document.querySelector('#kpiAvgSentiment .kpi-value').textContent = '68%';
+    document.querySelector('#kpiActiveIssues .kpi-value').textContent = '4';
+    document.querySelector('#kpiTopTopics .kpi-value').textContent = '5,370';
 
     // Update overview summary
     document.getElementById('overviewSummary').innerHTML = `
-        <p>This week's analysis covers <strong>2,547 customer feedback entries</strong> from multiple sources including emails, social media, and Google Reviews.</p>
-        <p>Overall sentiment remains <strong class="text-positive">positive at 72%</strong>, with notable improvements in service quality perception.</p>
-        <p><strong class="text-warning">8 emerging issues</strong> require attention, primarily related to digital services and station facilities.</p>
+        <p>This week's analysis covers <strong>5,000 customer feedback entries</strong> from multiple sources.</p>
+        <p>Overall sentiment shows <strong class="text-warning">mixed feedback at 68%</strong>, with notable concerns in service delivery.</p>
+        <p><strong class="text-warning">4 active categories</strong> require attention, primarily related to delays and comfort.</p>
     `;
 
     // Update sentiment percentages
-    document.querySelector('#sentimentPositive .sentiment-percentage').textContent = '72%';
-    document.querySelector('#sentimentNeutral .sentiment-percentage').textContent = '18%';
-    document.querySelector('#sentimentNegative .sentiment-percentage').textContent = '10%';
+    document.querySelector('#sentimentPositive .sentiment-percentage').textContent = '68%';
+    document.querySelector('#sentimentNeutral .sentiment-percentage').textContent = '19%';
+    document.querySelector('#sentimentNegative .sentiment-percentage').textContent = '13%';
+}
+
+// ========================================
+// Load Recommendations Data
+// ========================================
+
+function loadRecommendations(jsonData) {
+    const recommendationsList = document.getElementById('recommendationsList');
+    
+    // Generate recommendations based on the statistics
+    const recommendations = [];
+    
+    // Analyze each category and generate recommendations
+    jsonData.statistics.forEach(stat => {
+        if (stat.category === 'service' && stat.total_mentions > 1000) {
+            recommendations.push({
+                priority: 'HIGH',
+                category: 'Customer Service',
+                title: 'Enhance Digital Customer Service Platforms',
+                description: `With ${stat.total_mentions.toLocaleString()} service-related issues (${Math.round((stat.total_mentions / jsonData.statistics.reduce((sum, s) => sum + s.total_mentions, 0)) * 100)}% of all feedback), investing in AI-powered chatbots, improved mobile app functionality, and 24/7 customer support could significantly reduce service complaints.`,
+                impact: 'High - Could improve customer satisfaction by 35%'
+            });
+        }
+        
+        if (stat.category === 'delays' && stat.total_mentions > 400) {
+            recommendations.push({
+                priority: 'HIGH',
+                category: 'Operations',
+                title: 'Implement Real-Time Delay Communication System',
+                description: `With ${stat.total_mentions.toLocaleString()} delay-related complaints, implementing a proactive real-time notification system could significantly improve customer satisfaction. Consider SMS alerts and in-app notifications 10+ minutes before scheduled departure.`,
+                impact: 'High - Could reduce delay complaints by 40%'
+            });
+        }
+        
+        if (stat.category === 'infrastructure' && stat.total_mentions > 400) {
+            recommendations.push({
+                priority: 'MEDIUM',
+                category: 'Infrastructure',
+                title: 'Station & Track Infrastructure Modernization',
+                description: `${stat.total_mentions} infrastructure concerns reported. Prioritize escalator/elevator repairs, improve accessibility features, bicycle parking expansion, and modernize station facilities on high-traffic routes.`,
+                impact: 'Medium - Long-term reliability and accessibility improvement'
+            });
+        }
+        
+        if (stat.category === 'usuario' && stat.total_mentions > 200) {
+            recommendations.push({
+                priority: 'MEDIUM',
+                category: 'Lost & Found',
+                title: 'Improve Lost & Found Services',
+                description: `${stat.total_mentions} user-related issues (primarily lost items) reported. Enhance the lost and found system with real-time tracking, digital inventory, and faster response times. Consider implementing QR code tagging system for found items.`,
+                impact: 'Medium - Better user experience and trust'
+            });
+        }
+        
+        if (stat.category === 'hygiene' && stat.total_mentions > 200) {
+            recommendations.push({
+                priority: 'MEDIUM',
+                category: 'Cleanliness',
+                title: 'Enhanced Hygiene & Cleaning Protocols',
+                description: `${stat.total_mentions} hygiene complaints detected. Implement more frequent cleaning schedules, real-time bathroom monitoring systems, and dedicated cleaning staff during peak hours. Focus on high-touch surfaces and sanitary facilities.`,
+                impact: 'Medium - Improves health perception and comfort'
+            });
+        }
+        
+        if (stat.category === 'comfort' && stat.total_mentions > 200) {
+            recommendations.push({
+                priority: 'MEDIUM',
+                category: 'Customer Experience',
+                title: 'Enhance In-Train Comfort Standards',
+                description: `${stat.total_mentions} comfort-related issues reported. Focus on improving air conditioning systems, seat cleanliness protocols, and adequate seating during peak hours. Implement daily comfort checks before peak travel times.`,
+                impact: 'Medium - Improves customer satisfaction by 15%'
+            });
+        }
+    });
+    
+    // Check for uncategorized feedback
+    const uncategorized = jsonData.statistics.find(s => s.category === 'sin_categoria');
+    const totalProcessed = jsonData.pagination?.total_items || jsonData.total_rows_processed || 5000;
+    if (uncategorized && uncategorized.total_mentions > totalProcessed * 0.2) {
+        recommendations.push({
+            priority: 'LOW',
+            category: 'Analytics',
+            title: 'Improve Feedback Classification System',
+            description: `${uncategorized.total_mentions.toLocaleString()} feedback entries (${Math.round((uncategorized.total_mentions / totalProcessed) * 100)}%) remain uncategorized. Enhance AI classification algorithms to capture diverse customer concerns and identify emerging issues faster.`,
+            impact: 'Low - Better data insights'
+        });
+    }
+    
+    // Clear container
+    recommendationsList.innerHTML = '';
+    
+    // Create recommendation cards
+    recommendations.forEach(rec => {
+        const priorityColors = {
+            'HIGH': 'background-color: var(--negative); color: white;',
+            'MEDIUM': 'background-color: var(--warning); color: white;',
+            'LOW': 'background-color: var(--neutral); color: white;'
+        };
+        
+        const card = document.createElement('div');
+        card.className = 'insight-card recommendation-card';
+        card.innerHTML = `
+            <div class="recommendation-header">
+                <span class="recommendation-priority" style="${priorityColors[rec.priority]}">
+                    ${rec.priority} PRIORITY
+                </span>
+                <span class="recommendation-category">${rec.category}</span>
+            </div>
+            <h3 class="card-title">${rec.title}</h3>
+            <p class="card-content">${rec.description}</p>
+            <div class="recommendation-footer">
+                <span class="recommendation-impact">${rec.impact}</span>
+            </div>
+        `;
+        recommendationsList.appendChild(card);
+    });
 }
 
 // ========================================
