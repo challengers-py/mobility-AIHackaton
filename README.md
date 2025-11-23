@@ -42,11 +42,11 @@ Interactive dashboard that combines:
 
 Build a 24-hour MVP that enables:
 
-- ✅ Collect data from multiple sources (reviews, feedback, surveys)
-- ✅ Analyze them using AI (sentiment, categorization, trends)
-- ✅ Visualize in an interactive dashboard with dynamic charts
-- ✅ Generate actionable recommendations based on real insights
-- ✅ Integrate generative AI for automated executive summaries
+-  Collect data from multiple sources (reviews, feedback, surveys)
+-  Analyze them using AI (sentiment, categorization, trends)
+-  Visualize in an interactive dashboard with dynamic charts
+-  Generate actionable recommendations based on real insights
+-  Integrate generative AI for automated executive summaries
 
 ---
 
@@ -67,15 +67,15 @@ Build a 24-hour MVP that enables:
   - Strengths (1 sentence)
 
 #### **Sentiment Trends**
-- 📈 **Temporal Evolution by Category**: Evolution of 7 categories over time
-- 🍩 **Category Distribution Analysis**: Doughnut chart with distribution
-- 🌟 **Positive Feedback Distribution**: Detailed praise analysis
-- 🎨 **Color-Coded Legend Tables**: With visual indicators
+-  **Temporal Evolution by Category**: Evolution of 7 categories over time
+-  **Category Distribution Analysis**: Doughnut chart with distribution
+-  **Positive Feedback Distribution**: Detailed praise analysis
+-  **Color-Coded Legend Tables**: With visual indicators
 
 #### **Topic Evolution**
-- 📊 **Stacked Area Chart**: Chronological topic evolution
-- 🏆 **Top Topics Ranking**: Dynamic ranking with temporal filters
-- 📉 **Topic Statistics Cards**: Detailed statistics by category
+-  **Stacked Area Chart**: Chronological topic evolution
+-  **Top Topics Ranking**: Dynamic ranking with temporal filters
+-  **Topic Statistics Cards**: Detailed statistics by category
 
 #### **Emerging Issues**
 - 🚨 **Issue Trend Analysis**: Growth trends by category
@@ -84,23 +84,23 @@ Build a 24-hour MVP that enables:
   - 🟠 High (>600 mentions)
   - 🟡 Medium (>400 mentions)
   - 🟢 Low (<400 mentions)
-- 📊 **Issue Cards**: With translated common problem examples
+-  **Issue Cards**: With translated common problem examples
 
 #### **Recommendations**
-- 💡 **Actionable Insights**: By department (Operations, Marketing, Customer Service)
-- 🎯 **Priority Classification**: HIGH/MEDIUM/LOW
-- 📈 **Expected Impact**: Estimated ROI per recommendation
+-  **Actionable Insights**: By department (Operations, Marketing, Customer Service)
+-  **Priority Classification**: HIGH/MEDIUM/LOW
+-  **Expected Impact**: Estimated ROI per recommendation
 
-### 🎛️ Advanced Features
+###  Advanced Features
 
-- ⏱️ **Temporal Filters**: Month, Quarter, 6 Months, Year, All Time
-- 🔗 **Clickable KPI Cards**: Direct navigation between sections
-- 📱 **Responsive Design**: Mobile-first with adaptive sidebar
-- 🔄 **Auto-Refresh**: 
+- **Temporal Filters**: Month, Quarter, 6 Months, Year, All Time
+-  **Clickable KPI Cards**: Direct navigation between sections
+-  **Responsive Design**: Mobile-first with adaptive sidebar
+-  **Auto-Refresh**: 
   - Hot Topics: every 10 minutes
   - Dashboard Data: every 5 minutes
-- 🎨 **Brand Consistency**: Design aligned with ÖBB branding (red #E30613)
-- 🌐 **Multi-language Support**: German, Spanish, English
+-  **Brand Consistency**: Design aligned with ÖBB branding (red #E30613)
+-  **Multi-language Support**: German, Spanish, English
 
 ---
 
@@ -113,7 +113,7 @@ Build a 24-hour MVP that enables:
 - **Google Gemini AI 2.0 Flash**: Insight and summary generation
 
 ### Backend / Data
-- **Python 3.x**: Web scraping and data analysis
+- **Python**: Web scraping and data analysis
 - **BeautifulSoup**: ÖBB reviews scraping
 - **JSON**: Analyzed dataset storage (4 files)
 
@@ -188,7 +188,7 @@ mobility-AIHackaton/
 │       ├── bell-ringing.svg
 │       └── ...others...
 │
-├── mobile-app/               # React Native / Expo App
+├── mobile-app/               # ÖBB Unified Mobility App (React + TypeScript)
 │   ├── package.json
 │   ├── README.md
 │   ├── vite.config.ts
@@ -198,7 +198,7 @@ mobility-AIHackaton/
 │       ├── main.tsx
 │       ├── index.css
 │       ├── assets/
-│       ├── components/
+│       ├── components/      # UI Components (Search, Tickets, Profile, etc.)
 │       ├── styles/
 │       └── utils/
 │
@@ -248,10 +248,208 @@ mobility-AIHackaton/
 
 ### 👥 4. Mobile Development
 
-- React Native app with Expo
-- TypeScript + Vite
-- Figma components
-- **Delivery:** Mobile app prototype
+- Unified ÖBB Mobility App (React + TypeScript + Vite)
+- All-in-one travel solution with ticket booking, real-time tracking, and satisfaction surveys
+- Modern UI/UX with Figma design system
+- **Delivery:** Fully functional mobile app prototype
+
+---
+
+## 📱 ÖBB RailSense App
+
+### 🎯 Vision
+
+The **ÖBB Unified Mobility App** consolidates all ÖBB services into a single, seamless mobile experience, combining traditional transport features with **AI-powered feedback collection** to continuously improve service quality.
+
+### ✨ Core Features (Integrated from ÖBB Services)
+
+#### 🚆 Smart Travel & Ticketing
+
+1. **SimplyGo** 🎫
+   - Automatic route recognition and fare calculation
+   - Travel first, pay later based on actual journey
+   - No need to pre-purchase tickets
+
+2. **Real-Time Departures** ⏱️
+   - Favorite routes saved to homescreen
+   - Live train status and platform information
+   - Push notifications for delays or changes
+
+3. **Graphical Seat Selection** 💺
+   - Visual seat picker for Railjet connections
+   - Window/aisle preference selection
+   - Train direction change indicators
+   - Seat availability in real-time
+
+4. **Smart Ticket Management** 🎟️
+   - 3-minute cancellation window for all tickets
+   - Digital wallet for weekly/monthly passes
+   - One-tap ticket display with homescreen widgets
+   - QR code generation for inspections
+
+5. **Advanced Search & Booking** 🔍
+   - Price filter to find cheapest ÖBB offers (Sparschiene)
+   - Multi-passenger booking (friends, family)
+   - Pet tickets (dogs) and bicycle transport
+   - Companion fare management
+
+6. **Digital Passes** 🎴
+   - Vorteilscard digital storage
+   - KlimaTicket integration
+   - Discount card quick access via widgets
+   - One-click display during inspections
+
+#### 🆕 AI-Enhanced Features (NEW)
+
+7. **In-App Satisfaction Surveys** 📊
+   - Post-journey feedback collection
+   - Category-specific rating (service, cleanliness, delays, comfort)
+   - Multi-language support (German, Spanish, English)
+   - **Data feeds directly into Analytics Dashboard**
+
+8. **Smart Feedback Assistant** 🤖
+   - AI-powered sentiment analysis in real-time
+   - Automatic issue categorization
+   - Priority escalation for critical complaints
+   - Personalized response based on feedback history
+
+9. **Journey Insights** 📈
+   - Personal travel statistics
+   - Carbon footprint tracking
+   - Service quality trends for favorite routes
+   - Recommendations based on travel patterns
+
+10. **Voice Feedback** 🎙️
+    - Voice-to-text complaint/praise submission
+    - Gemini AI transcription and analysis
+    - Hands-free feedback during travel
+
+### 🏗️ Technical Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              ÖBB UNIFIED MOBILITY APP                    │
+│                  (React + TypeScript)                    │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
+│  │   Search     │  │   Tickets    │  │   Profile    │ │
+│  │   Screen     │  │   Screen     │  │   Screen     │ │
+│  └──────────────┘  └──────────────┘  └──────────────┘ │
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
+│  │  Connection  │  │    Seat      │  │   Survey     │ │
+│  │   Results    │  │  Selection   │  │   Modal      │ │
+│  └──────────────┘  └──────────────┘  └──────────────┘ │
+│                                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
+│  │   Journey    │  │   Purchase   │  │   Feedback   │ │
+│  │     Map      │  │ Confirmation │  │   Widget     │ │
+│  └──────────────┘  └──────────────┘  └──────────────┘ │
+│                                                          │
+└─────────────────┬───────────────────────────────────────┘
+                  │
+                  ▼
+┌─────────────────────────────────────────────────────────┐
+│                    BACKEND SERVICES                      │
+├─────────────────────────────────────────────────────────┤
+│  • ÖBB Ticketing API (booking, cancellation, pricing)   │
+│  • Real-Time Data API (departures, delays, platforms)   │
+│  • Seat Reservation API (graphical selection)           │
+│  • User Profile API (passes, favorites, history)        │
+│  • Feedback Collection API (surveys → JSON → Dashboard) │
+│  • Gemini AI API (sentiment analysis, categorization)   │
+└─────────────────────────────────────────────────────────┘
+                  │
+                  ▼
+┌─────────────────────────────────────────────────────────┐
+│            ANALYTICS DASHBOARD (WEB)                     │
+│   Real-time visualization of feedback from mobile app   │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 🔄 Feedback Loop Integration
+
+**Journey: Mobile App → Analytics Dashboard**
+
+```mermaid
+User Journey → Survey Prompt → Rating Submission → 
+AI Analysis (Gemini) → JSON Storage → Dashboard Visualization → 
+Actionable Insights → Service Improvements → Better User Experience
+```
+
+#### How It Works:
+
+1. **Trigger:** User completes a journey
+2. **Survey:** In-app modal asks for feedback (1-5 stars + comments)
+3. **Categories:** User selects issue type (service, delays, hygiene, etc.)
+4. **AI Processing:** Gemini analyzes sentiment and extracts keywords
+5. **Storage:** Feedback saved to JSON files (german_complaint.json, etc.)
+6. **Dashboard:** Real-time update of KPIs and charts
+7. **Action:** Operations team receives prioritized recommendations
+
+### 📊 Survey Design
+
+**Post-Journey Feedback Modal:**
+
+```
+┌─────────────────────────────────────────────────┐
+│  How was your journey today?                    │
+│                                                  │
+│  ⭐⭐⭐⭐⭐  (5-star rating)                        │
+│                                                  │
+│  What went well? What could improve?            │
+│  ┌─────────────────────────────────────────┐   │
+│  │ [Text area for comments]                 │   │
+│  └─────────────────────────────────────────┘   │
+│                                                  │
+│  Select categories (optional):                  │
+│  🚂 Service  ⏱️ Delays  🧼 Hygiene              │
+│  🏗️ Infrastructure  🪑 Comfort  👤 User         │
+│                                                  │
+│  [Skip]              [Submit Feedback]          │
+└─────────────────────────────────────────────────┘
+```
+
+### 🎨 Key Technologies
+
+- **Frontend:** React 18, TypeScript, Vite
+- **UI Components:** Shadcn/ui, Tailwind CSS
+- **State Management:** React Context + Hooks
+- **Routing:** React Router v6
+- **API Integration:** Axios, TanStack Query
+- **Maps:** Leaflet / Mapbox GL
+- **AI Integration:** Google Gemini AI 2.0 Flash
+- **Analytics:** Custom hooks for tracking user behavior
+
+### 🚀 Development Status
+
+| Feature | Status | Priority |
+|---------|--------|----------|
+| Search & Booking | ✅ Complete | HIGH |
+| Seat Selection | ✅ Complete | HIGH |
+| Ticket Management | ✅ Complete | HIGH |
+| Real-Time Updates | 🟡 In Progress | HIGH |
+| Satisfaction Surveys | ✅ Complete | CRITICAL |
+| Voice Feedback | 🔴 Planned | MEDIUM |
+| SimplyGo Integration | 🔴 Planned | LOW |
+| Widgets | 🔴 Planned | LOW |
+
+### 📈 Impact on Service Quality
+
+**Feedback Collection Goals:**
+
+- 📊 **Target:** 10,000+ survey responses per month
+- 🎯 **Response Rate:** >30% of completed journeys
+- ⚡ **Real-Time Processing:** <1 minute from submission to dashboard
+- 🔄 **Action Cycle:** Issues addressed within 48 hours
+
+**Expected Outcomes:**
+
+- ✅ 25% improvement in customer satisfaction scores
+- ✅ 40% faster issue identification and resolution
+- ✅ 15% reduction in repeat complaints
+- ✅ Proactive service improvements based on trends
 
 ---
 
