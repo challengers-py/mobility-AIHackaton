@@ -1,0 +1,2892 @@
+{
+  "status": "success",
+  "pagination": {
+    "current_page": 1,
+    "items_per_page": 5000,
+    "total_pages": 1,
+    "total_items": 200
+  },
+  "statistics": [
+    {
+      "category": "service",
+      "total_mentions": 90
+    },
+    {
+      "category": "hygiene",
+      "total_mentions": 40
+    },
+    {
+      "category": "comfort",
+      "total_mentions": 39
+    },
+    {
+      "category": "infrastructure",
+      "total_mentions": 31
+    },
+    {
+      "category": "punctuality",
+      "total_mentions": 0
+    }
+  ],
+  "data": [
+    {
+      "row_id": 1,
+      "date": "2025-12-03",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nMiguel Simó Galindo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 2,
+      "date": "2024-05-12",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nBernabé Pío Segovia Rivas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 3,
+      "date": "2025-01-19",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nBaudelio Gomez-Calderon Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 4,
+      "date": "2023-07-06",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nBenigno Almazán Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 5,
+      "date": "2025-03-04",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nÁurea Marcos-Martinez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 6,
+      "date": "2025-10-08",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nEdelmira Rosa Román Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 7,
+      "date": "2024-12-27",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nYolanda Abellán Olmo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 8,
+      "date": "2023-04-05",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nJudith Prada Tejera Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 9,
+      "date": "2025-11-07",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nDorita Candela Arjona Valentín Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 10,
+      "date": "2023-01-20",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nMarcelino Redondo Mulet Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 11,
+      "date": "2025-08-18",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nCorona del Polo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 12,
+      "date": "2024-01-28",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMiguel Ángel Roselló Soria Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 13,
+      "date": "2023-01-05",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nLuisina Maricruz Varela Nicolás Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 14,
+      "date": "2024-12-13",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nRafael Tejada Gutierrez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 15,
+      "date": "2025-10-02",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal del tren. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAlbano Ballesteros Sales Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 16,
+      "date": "2023-03-09",
+      "subject": "un tren especialmente limpio",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nRocío Sevillano Rivas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 17,
+      "date": "2024-09-07",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nOctavio Llanos Díaz Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 18,
+      "date": "2025-10-28",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nRaimundo Peinado Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 19,
+      "date": "2023-03-08",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nSabina Alemany Alberola Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 20,
+      "date": "2024-12-24",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nRaúl Alcántara Sebastián Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 21,
+      "date": "2023-03-17",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMarta Pozo Valentín Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 22,
+      "date": "2024-01-22",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal de control. Esto generó bastante estrés ya que tenía compromisos importantes después. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nEugenio Martorell-Gallart Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 23,
+      "date": "2024-06-17",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nVenceslás Pol-Molins Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 24,
+      "date": "2023-03-13",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: muy buen servicio en un tren nocturno. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nMarc Rivero Lozano Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 25,
+      "date": "2023-09-22",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nHaydée Sureda Barroso Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 26,
+      "date": "2024-05-25",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: trato poco amable por parte del personal del tren. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMargarita Aguiló Olivares Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 27,
+      "date": "2025-02-20",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: trato poco amable por parte del personal del tren. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nVinicio Leiva-Castañeda Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 28,
+      "date": "2023-10-28",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nTere Colom Julián Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 29,
+      "date": "2023-02-05",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: trato poco amable por parte del personal de control. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nGermán del Vilar Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 30,
+      "date": "2025-01-15",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nCelestino del Recio Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 31,
+      "date": "2023-11-25",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nNilda Casas Casanova Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 32,
+      "date": "2023-02-27",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal del tren. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMaite Esmeralda Rocha Cuadrado Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 33,
+      "date": "2023-11-02",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nRico Bautista Morell Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 34,
+      "date": "2025-02-12",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMaría José Arellano-Pinedo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 35,
+      "date": "2024-08-07",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nJuanito Luis Ángel Miró Torrens Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 36,
+      "date": "2024-07-22",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nOlga Nélida Flores Páez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 37,
+      "date": "2025-08-24",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nPaola Miró Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 38,
+      "date": "2023-07-24",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal del tren. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJoaquín Ayuso Larrañaga Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 39,
+      "date": "2024-06-07",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nJulio Bonilla-Mayoral Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 40,
+      "date": "2024-04-10",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nAsdrubal de Alcaraz Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 41,
+      "date": "2025-05-08",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMarcela Perea-Llorens Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 42,
+      "date": "2025-02-05",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: la altura del tren hacía difícil subir sin ayuda. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nVirgilio Azcona Alberola Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 43,
+      "date": "2024-09-09",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: muy buen servicio en un tren nocturno. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nBrígida Montoya Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 44,
+      "date": "2023-10-01",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nAsdrubal Garriga Iborra Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 45,
+      "date": "2023-04-19",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nFlorencia Vazquez Mur Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 46,
+      "date": "2024-09-01",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nEncarnación Villaverde Soto Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 47,
+      "date": "2023-04-10",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal del tren. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nFelix Cal Acosta Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 48,
+      "date": "2023-03-27",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal de control. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nEpifanio Valle Avilés Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 49,
+      "date": "2025-11-07",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nMarciano Huerta Chaparro Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 50,
+      "date": "2024-03-20",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nAugusto Carbonell Perelló Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 51,
+      "date": "2025-09-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nRoldán Aroca Vargas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 52,
+      "date": "2025-03-04",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRoxana Oliveras Arroyo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 53,
+      "date": "2024-03-22",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nNatalio Pomares Anglada Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 54,
+      "date": "2024-03-01",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nLina Paz Font Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 55,
+      "date": "2025-09-14",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nJose Luis Villanueva-Mena Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 56,
+      "date": "2023-08-11",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: trato poco amable por parte del personal de control. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nSalomé de Agullo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 57,
+      "date": "2023-01-15",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nEduardo Valcárcel Jáuregui Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 58,
+      "date": "2025-09-09",
+      "subject": "un tren especialmente limpio",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nJulio César Bermúdez Quiroga Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 59,
+      "date": "2025-09-19",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nInmaculada Berrocal Espada Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 60,
+      "date": "2025-03-18",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: falta de ayuda para personas con movilidad reducida. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nJose Ramón Pozo Royo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 61,
+      "date": "2023-10-28",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMariana Valverde Torrecilla Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 62,
+      "date": "2024-01-22",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal de control. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nFermín Lillo Lobato Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 63,
+      "date": "2024-02-17",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nBeatriz Andres Mur Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 64,
+      "date": "2023-10-22",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nPorfirio del Ayuso Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 65,
+      "date": "2024-01-14",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAitana Ágata Mayoral Costa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 66,
+      "date": "2024-06-05",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: muy buen servicio en un tren nocturno. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nBuenaventura Milla Anglada Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 67,
+      "date": "2023-08-07",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nNéstor Plana Prats Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 68,
+      "date": "2023-10-24",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nEpifanio Peláez Pedro Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 69,
+      "date": "2023-04-21",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: la altura del tren hacía difícil subir sin ayuda. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nRosalina Corbacho Colom Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 70,
+      "date": "2025-03-27",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: trato poco amable por parte del personal de control. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nAzahar Bas Alcalá Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 71,
+      "date": "2023-10-04",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nPorfirio Vega Villalonga Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 72,
+      "date": "2023-03-24",
+      "subject": "un tren especialmente limpio",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRégulo Quintana Gras Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 73,
+      "date": "2023-08-09",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nCosme Segarra-Balaguer Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 74,
+      "date": "2023-02-23",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal del tren. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nJulie Malo Cazorla Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 75,
+      "date": "2024-02-15",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nRoberta Bienvenida Iglesias Valencia Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 76,
+      "date": "2023-04-25",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nEfraín Reyes Pinilla Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 77,
+      "date": "2025-06-25",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nCarina Huerta Agustí Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 78,
+      "date": "2025-06-17",
+      "subject": "un tren especialmente limpio",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJose Ramón Martin Santamaria Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 79,
+      "date": "2023-07-17",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nOnofre Demetrio Rosell Lasa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 80,
+      "date": "2025-05-05",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nSerafina Coello-Camps Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 81,
+      "date": "2024-12-11",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal del tren. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMaría Teresa Rovira Borrás Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 82,
+      "date": "2025-08-07",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nAzeneth Marita Feijoo Ríos Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 83,
+      "date": "2025-03-11",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRoxana Llano-Campoy Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 84,
+      "date": "2025-04-01",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJoaquín Izaguirre Báez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 85,
+      "date": "2024-11-13",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nAnabel Llorente Paniagua Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 86,
+      "date": "2025-01-11",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nFátima Ordóñez Maestre Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 87,
+      "date": "2023-01-07",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: muy buen servicio en un tren nocturno. La situación fue especialmente problemática porque afectó toda mi organización. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nFidel Crespo Laguna Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 88,
+      "date": "2024-06-02",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nAngelino Acosta Barberá Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 89,
+      "date": "2024-10-12",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. Tuve que reorganizar citas y generar cambios de última hora. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nRosalinda Nuñez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 90,
+      "date": "2025-09-15",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRosaura de Castellanos Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 91,
+      "date": "2023-09-21",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nJafet José Lobo Vaquero Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 92,
+      "date": "2025-12-06",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nPepe Higueras Posada Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 93,
+      "date": "2025-12-24",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal del tren. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nRosalva Sierra Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 94,
+      "date": "2024-03-14",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nCelestina Cornejo Ayala Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 95,
+      "date": "2023-03-22",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal de control. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nSebastian Bruno Guzmán Manrique Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 96,
+      "date": "2025-05-25",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nBlanca de Palomar Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 97,
+      "date": "2023-05-07",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMaximiano Alcázar-Uría Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 98,
+      "date": "2024-10-24",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: muy buen servicio en un tren nocturno. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nSilvia Mulet Tomé Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 99,
+      "date": "2024-11-09",
+      "subject": "un tren especialmente limpio",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJosé Antonio Acero Ferreras Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 100,
+      "date": "2024-08-12",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nCruz Damián Romero Leal Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 101,
+      "date": "2024-11-28",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nArmando Martin Montaña Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 102,
+      "date": "2024-04-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nOlalla Maura Donaire Paniagua Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 103,
+      "date": "2025-08-14",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAsdrubal Figuerola Lasa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 104,
+      "date": "2025-11-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAnastasio Feliu-Benavent Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 105,
+      "date": "2023-09-04",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nAlex Priego Franco Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 106,
+      "date": "2025-03-14",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJulián Quesada Ordóñez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 107,
+      "date": "2023-08-18",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nFeliciana Reig Iglesia Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 108,
+      "date": "2023-10-10",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRemigio de Flores Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 109,
+      "date": "2025-11-06",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal de control. El problema se agravó porque no había alternativas evidentes en ese momento. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nLeticia Azorin Galván Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 110,
+      "date": "2024-12-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRosalinda de Madrid Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 111,
+      "date": "2024-08-17",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nHermenegildo Salvà Jerez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 112,
+      "date": "2023-03-04",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: falta de ayuda para personas con movilidad reducida. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nEsperanza Cuéllar Luís Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 113,
+      "date": "2025-01-12",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMartina Roig-Gisbert Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 114,
+      "date": "2023-09-07",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMaría Carmen de Arnaiz Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 115,
+      "date": "2023-06-10",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nRaúl Robledo Alcalde Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 116,
+      "date": "2023-03-20",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nValero Lloret Sainz Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 117,
+      "date": "2024-05-21",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal de control. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nGuadalupe Buendía Valverde Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 118,
+      "date": "2023-09-24",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nSalud Robles Rosado Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 119,
+      "date": "2023-02-19",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nNereida Duque-Tovar Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 120,
+      "date": "2023-06-25",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nAdoración Carla Mateos Peña Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 121,
+      "date": "2024-08-17",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nJesusa Ester Contreras Millán Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 122,
+      "date": "2025-02-02",
+      "subject": "un tren especialmente limpio",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJosé Antonio Hervia Rico Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 123,
+      "date": "2025-01-15",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nSegismundo Oller-Pol Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 124,
+      "date": "2024-05-20",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMamen Cerezo Baeza Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 125,
+      "date": "2025-09-27",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: muy buen servicio en un tren nocturno. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nDomitila Diaz Tolosa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 126,
+      "date": "2024-01-21",
+      "subject": "un tren especialmente limpio",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nTeodora Elorza Tomás Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 127,
+      "date": "2025-07-25",
+      "subject": "un tren especialmente limpio",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nUrbano Frías Franch Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 128,
+      "date": "2024-11-17",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nBerta del Ferrando Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 129,
+      "date": "2023-01-25",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal del tren. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nAnabel Alvarez Bárcena Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 130,
+      "date": "2024-07-03",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nVicenta Rocha Prieto Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 131,
+      "date": "2023-11-22",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nRoxana del Urrutia Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 132,
+      "date": "2025-02-23",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nElisabet Casado-Fábregas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 133,
+      "date": "2025-04-02",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nClaudia Lobo Madrid Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 134,
+      "date": "2024-10-17",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nSaturnino del Puerta Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 135,
+      "date": "2023-02-26",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: la altura del tren hacía difícil subir sin ayuda. El problema se agravó porque no había alternativas evidentes en ese momento. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nCorona Morell Cuevas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 136,
+      "date": "2024-01-21",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nIsidro Enríquez Riquelme Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 137,
+      "date": "2024-03-09",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nCristian Casemiro Álvarez Luque Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 138,
+      "date": "2023-11-06",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nHermenegildo Ruben Álamo Ribes Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 139,
+      "date": "2024-12-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nEligio Cañas Peña Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 140,
+      "date": "2023-09-09",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nCiro Bravo-Domínguez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 141,
+      "date": "2023-05-02",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nNico Adadia Hernández Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 142,
+      "date": "2025-07-09",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nMaría Carmen Arnaiz Martinez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 143,
+      "date": "2025-12-28",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nOsvaldo Vendrell Bilbao Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 144,
+      "date": "2023-09-04",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nCintia Blazquez Cortés Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 145,
+      "date": "2023-05-08",
+      "subject": "un tren especialmente limpio",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nAnselmo Reyes Buendía García Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 146,
+      "date": "2023-06-24",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nRaquel Aragón Agullo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 147,
+      "date": "2024-07-28",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nSancho Torrents Barco Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 148,
+      "date": "2024-01-12",
+      "subject": "un tren especialmente limpio",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: un tren especialmente limpio. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nMacarena Pavón Robles Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 149,
+      "date": "2024-03-08",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nIsidoro Celso Calvo Solís Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 150,
+      "date": "2024-12-21",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: un tren especialmente limpio. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nCelestina del Amo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 151,
+      "date": "2025-06-23",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: falta de ayuda para personas con movilidad reducida. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAmérico Nebot Juan Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 152,
+      "date": "2024-06-23",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nBernabé Ferrer Cuesta Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 153,
+      "date": "2024-11-15",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nAni Cayetana Girón Escolano Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 154,
+      "date": "2024-11-10",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: falta de ayuda para personas con movilidad reducida. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nGraciano del Villaverde Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 155,
+      "date": "2024-08-11",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nJulián Lumbreras Roldan Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 156,
+      "date": "2023-11-25",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nSalomé Marin-Vilalta Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 157,
+      "date": "2024-01-13",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nCarmelo Tejera-Riquelme Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 158,
+      "date": "2025-12-18",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nManolo Vazquez-Córdoba Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 159,
+      "date": "2025-07-09",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nTeo Jonatan Contreras Villalonga Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 160,
+      "date": "2023-04-01",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. Fue un inconveniente serio porque no recibí información clara en ningún momento. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nFlorinda Rico Landa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 161,
+      "date": "2024-10-17",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nBegoña de Mateos Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 162,
+      "date": "2025-05-19",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: trato poco amable por parte del personal de control. El problema se agravó porque no había alternativas evidentes en ese momento. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nLuciano Girón Palacio Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 163,
+      "date": "2024-04-09",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nPetrona Zapata Grau Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 164,
+      "date": "2024-07-08",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nOfelia Suárez-Mateos Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 165,
+      "date": "2023-09-19",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nRemedios Criado-Montserrat Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 166,
+      "date": "2025-05-28",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: trato poco amable por parte del personal de control. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMaría Dolores Domínguez Casanovas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 167,
+      "date": "2023-12-10",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: trato poco amable por parte del personal de control. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nToño del Llanos Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 168,
+      "date": "2024-08-21",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nAdelaida Plana Morell Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 169,
+      "date": "2023-10-13",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: muy buen servicio en un tren nocturno. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nVíctor Salcedo Catalán Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 170,
+      "date": "2025-04-24",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nMagdalena Blanes Dueñas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 171,
+      "date": "2025-12-13",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: la altura del tren hacía difícil subir sin ayuda. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nMacario Blazquez Pombo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 172,
+      "date": "2025-06-27",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: falta de ayuda para personas con movilidad reducida. La situación fue especialmente problemática porque afectó toda mi organización. Esto provocó gastos adicionales que no debería haber tenido. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nGraciano Marcelino Torralba Nogueira Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 173,
+      "date": "2023-08-21",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nApolinar Chamorro Aragón Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 174,
+      "date": "2023-09-09",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nRosalía Tolosa Heredia Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 175,
+      "date": "2025-01-06",
+      "subject": "un tren especialmente limpio",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nSosimo Company Tolosa Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 176,
+      "date": "2025-02-16",
+      "subject": "un tren especialmente limpio",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un tren especialmente limpio. La situación fue especialmente problemática porque afectó toda mi organización. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nEstrella Cisneros Carreño Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 177,
+      "date": "2024-01-26",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal de control. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nFortunata Hoyos Ros Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 178,
+      "date": "2023-08-02",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. La situación fue especialmente problemática porque afectó toda mi organización. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nOvidio Galo Chaparro Giner Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 179,
+      "date": "2024-02-07",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: la altura del tren hacía difícil subir sin ayuda. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nTrinidad Amada Pérez Osuna Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 180,
+      "date": "2023-03-01",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nWilfredo Pedrero Quesada Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 181,
+      "date": "2025-03-26",
+      "subject": "un tren especialmente limpio",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Tuve que reorganizar citas y generar cambios de última hora. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nBorja Ferreras Ródenas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 182,
+      "date": "2025-06-11",
+      "subject": "un tren especialmente limpio",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un tren especialmente limpio. Esto generó bastante estrés ya que tenía compromisos importantes después. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nSegismundo Aramburu Comas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 183,
+      "date": "2023-11-14",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que en el futuro haya más claridad y rapidez en la comunicación. Un saludo cordial,\r\nMaría Teresa Nogués Plana Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 184,
+      "date": "2023-03-04",
+      "subject": "un tren especialmente limpio",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un tren especialmente limpio. Fue un inconveniente serio porque no recibí información clara en ningún momento. Tuve que reorganizar citas y generar cambios de última hora. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nEliseo del Carrillo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 185,
+      "date": "2023-03-18",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nJavi Villegas Jover Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 186,
+      "date": "2024-12-18",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nClarisa Romeu-Reina Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 187,
+      "date": "2024-12-21",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: la altura del tren hacía difícil subir sin ayuda. El problema se agravó porque no había alternativas evidentes en ese momento. Tuve que reorganizar citas y generar cambios de última hora. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nEmiliana Casares Dueñas Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 188,
+      "date": "2025-06-26",
+      "subject": "un tren especialmente limpio",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: un tren especialmente limpio. El problema se agravó porque no había alternativas evidentes en ese momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nHernán Prieto Salgado Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "limpio"
+        ]
+      }
+    },
+    {
+      "row_id": 189,
+      "date": "2025-03-02",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: trato poco amable por parte del personal del tren. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Tuve que reorganizar citas y generar cambios de última hora. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nAdelardo Adán Garay Calvo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 190,
+      "date": "2024-09-17",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: falta de ayuda para personas con movilidad reducida. Fue un inconveniente serio porque no recibí información clara en ningún momento. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nCecilia Eugenia Casas Linares Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 191,
+      "date": "2023-11-22",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: trato poco amable por parte del personal del tren. Fue un inconveniente serio porque no recibí información clara en ningún momento. Como consecuencia, perdí mi conexión con otro transporte. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nGonzalo Benigno Bejarano Muñoz Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 192,
+      "date": "2024-11-21",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ya que tenía compromisos importantes después. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nJose Francisco Arco Solsona Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "movilidad"
+        ]
+      }
+    },
+    {
+      "row_id": 193,
+      "date": "2023-08-09",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nDafne Ferrero Carbajo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 194,
+      "date": "2025-03-10",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la altura del tren hacía difícil subir sin ayuda. Esto generó bastante estrés ya que tenía compromisos importantes después. Esto provocó gastos adicionales que no debería haber tenido. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nEugenio Sastre Folch Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "altura"
+        ]
+      }
+    },
+    {
+      "row_id": 195,
+      "date": "2023-09-27",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no recibí información clara en ningún momento. Terminé buscando soluciones por mi cuenta, lo cual fue muy difícil. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nClotilde Bermúdez Leon Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 196,
+      "date": "2025-06-08",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: muy buen servicio en un tren nocturno. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nConstanza Pi Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 197,
+      "date": "2023-08-18",
+      "subject": "trato poco amable por parte del personal del tren",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: trato poco amable por parte del personal del tren. La situación fue especialmente problemática porque afectó toda mi organización. Como consecuencia, perdí mi conexión con otro transporte. Espero sinceramente que puedan evitar que algo así vuelva a suceder. Un saludo cordial,\r\nAmérica Naranjo Rodríguez Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 198,
+      "date": "2024-05-17",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: trato poco amable por parte del personal de control. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. A causa de ello, llegué mucho más tarde de lo previsto. Me gustaría que se reforzara la atención en situaciones imprevistas. Un saludo cordial,\r\nOfelia Viña Cobo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal",
+          "amable"
+        ]
+      }
+    },
+    {
+      "row_id": 199,
+      "date": "2024-09-01",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: muy buen servicio en un tren nocturno. Lo más complicado fue que dependía de la puntualidad para llegar a tiempo. Esto provocó gastos adicionales que no debería haber tenido. Confío en que se revisen los procesos para que los pasajeros estén mejor acompañados. Un saludo cordial,\r\nEmilia Artigas-Royo Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    },
+    {
+      "row_id": 200,
+      "date": "2025-11-15",
+      "subject": "muy buen servicio en un tren nocturno",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: muy buen servicio en un tren nocturno. El problema se agravó porque no había alternativas evidentes en ese momento. Como consecuencia, perdí mi conexión con otro transporte. Sería de gran ayuda que se implementaran mejoras para prevenir estos problemas. Un saludo cordial,\r\nEsmeralda Ferreras Blasco Además, deseo añadir que toda la experiencia resultó bastante frustrante y deja claro lo importante que es contar con una comunicación transparente y un apoyo constante para los pasajeros.",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "buen"
+        ]
+      }
+    }
+  ],
+  "processing_time": 0.1827
+}
