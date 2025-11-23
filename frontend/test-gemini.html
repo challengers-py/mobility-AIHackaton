@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API Test - ÖBB Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .test-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #E30613;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .test-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .test-section h2 {
+            color: #333;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #E30613;
+        }
+
+        button {
+            background: linear-gradient(135deg, #E30613 0%, #C30010 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 6, 19, 0.3);
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .response-box {
+            background: white;
+            border: 2px solid #E30613;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            min-height: 100px;
+            display: none;
+        }
+
+        .response-box.visible {
+            display: block;
+        }
+
+        .response-box.loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .response-box.error {
+            border-color: #dc3545;
+            background: #fff5f5;
+            color: #dc3545;
+        }
+
+        .response-box.success {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        .response-text {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(227, 6, 19, 0.3);
+            border-radius: 50%;
+            border-top-color: #E30613;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .status-indicator.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-indicator.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #0c5460;
+        }
+
+        .examples {
+            display: grid;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .example-btn {
+            background: #6c757d;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            justify-content: flex-start;
+        }
+
+        .example-btn:hover {
+            background: #5a6268;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>
+            <span>🤖</span>
+            Gemini API Test
+        </h1>
+        <p class="subtitle">Test your Google Gemini API integration for the ÖBB Dashboard</p>
+
+        <div class="info-box">
+            <strong>ℹ️ Info:</strong> Esta es una página de prueba para verificar que tu API key de Gemini funciona correctamente. 
+            Una vez confirmado, el dashboard lo usará automáticamente.
+        </div>
+
+        <!-- Test Section 1: Simple Test -->
+        <div class="test-section">
+            <h2>📝 Test Simple</h2>
+            <textarea id="promptInput" placeholder="Escribe tu pregunta o prompt aquí...">Genera un insight breve sobre el transporte ferroviario en Austria basado en estos datos: Satisfacción 72%, Puntualidad mejoró 12%, Quejas de app móvil aumentaron 23%.</textarea>
+            
+            <button id="testBtn" onclick="testGemini()">
+                <span>🚀</span>
+                <span>Probar Gemini API</span>
+            </button>
+
+            <div id="responseBox" class="response-box">
+                <div class="response-text" id="responseText"></div>
+            </div>
+
+            <div id="statusIndicator"></div>
+        </div>
+
+        <!-- Quick Examples -->
+        <div class="test-section">
+            <h2>💡 Ejemplos Rápidos</h2>
+            <div class="examples">
+                <button class="example-btn" onclick="loadExample(1)">
+                    📊 Ejemplo 1: Análisis de datos ÖBB
+                </button>
+                <button class="example-btn" onclick="loadExample(2)">
+                    🔍 Ejemplo 2: Resumen ejecutivo
+                </button>
+                <button class="example-btn" onclick="loadExample(3)">
+                    🎯 Ejemplo 3: Insight de una línea
+                </button>
+            </div>
+        </div>
+
+        <!-- API Info -->
+        <div class="test-section">
+            <h2>🔧 Configuración Actual</h2>
+            <p><strong>API Key:</strong> <code>AIzaSyBD...kaALuEE</code> (oculta por seguridad)</p>
+            <p><strong>Model:</strong> <code>gemini-2.0-flash</code></p>
+            <p><strong>Endpoint:</strong> <code>generativelanguage.googleapis.com</code></p>
+        </div>
+    </div>
+
+    <script>
+        const CONFIG = {
+            GEMINI_API_KEY: 'AIzaSyBDkLxMoFkoJ4s1M2bPDehZylALkaALuEE',
+            GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
+        };
+
+        const examples = {
+            1: "Eres un analista de ÖBB (Austrian Federal Railways). Analiza estos datos de feedback de clientes: Satisfacción general 72%, Puntualidad mejoró 12% en rutas Viena-Salzburgo, Quejas sobre conectividad de app móvil aumentaron 23% en horas pico, WiFi mejoró 18%. Genera un insight profesional de máximo 2 oraciones.",
+            2: "Genera un resumen ejecutivo breve sobre tendencias de transporte ferroviario en Austria basado en: 2,547 comentarios de clientes, 8 problemas activos, temas principales son puntualidad, app móvil, WiFi y estaciones.",
+            3: "En una sola oración, resume el hallazgo más importante de la semana para ÖBB considerando: mejora en puntualidad pero problemas técnicos en app móvil."
+        };
+
+        function loadExample(num) {
+            document.getElementById('promptInput').value = examples[num];
+        }
+
+        async function testGemini() {
+            const promptInput = document.getElementById('promptInput');
+            const responseBox = document.getElementById('responseBox');
+            const responseText = document.getElementById('responseText');
+            const testBtn = document.getElementById('testBtn');
+            const statusIndicator = document.getElementById('statusIndicator');
+
+            const prompt = promptInput.value.trim();
+
+            if (!prompt) {
+                alert('Por favor escribe un prompt primero');
+                return;
+            }
+
+            // Show loading state
+            responseBox.className = 'response-box visible loading';
+            responseText.innerHTML = '<div class="loader"></div> <span style="margin-left: 10px;">Consultando a Gemini AI...</span>';
+            testBtn.disabled = true;
+            testBtn.innerHTML = '<div class="loader"></div> <span>Procesando...</span>';
+            statusIndicator.innerHTML = '';
+
+            try {
+                console.log('🚀 Enviando request a Gemini...');
+                console.log('Prompt:', prompt);
+
+                const response = await fetch(CONFIG.GEMINI_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-goog-api-key': CONFIG.GEMINI_API_KEY
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{
+                                text: prompt
+                            }]
+                        }]
+                    })
+                });
+
+                console.log('📡 Response status:', response.status);
+
+                if (!response.ok) {
+                    const errorData = await response.text();
+                    console.error('❌ Error response:', errorData);
+                    throw new Error(`API Error: ${response.status} - ${errorData}`);
+                }
+
+                const data = await response.json();
+                console.log('✅ Response data:', data);
+
+                // Extract generated text
+                const generatedText = data.candidates[0].content.parts[0].text;
+
+                // Show success
+                responseBox.className = 'response-box visible success';
+                responseText.innerHTML = `<strong>🤖 Respuesta de Gemini:</strong><br><br>${generatedText}`;
+                
+                statusIndicator.innerHTML = '<div class="status-indicator success">✅ API funcionando correctamente</div>';
+
+                console.log('✅ Test exitoso!');
+
+            } catch (error) {
+                console.error('❌ Error:', error);
+                
+                responseBox.className = 'response-box visible error';
+                responseText.innerHTML = `<strong>❌ Error:</strong><br><br>${error.message}<br><br><small>Revisa la consola del navegador (F12) para más detalles.</small>`;
+                
+                statusIndicator.innerHTML = '<div class="status-indicator error">❌ Error en la API - Verifica tu API key</div>';
+            } finally {
+                testBtn.disabled = false;
+                testBtn.innerHTML = '<span>🚀</span><span>Probar Gemini API</span>';
+            }
+        }
+
+        // Test on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('🔧 Gemini Test Page cargada');
+            console.log('📝 API Key configurada:', CONFIG.GEMINI_API_KEY.substring(0, 20) + '...');
+            console.log('🌐 Endpoint:', CONFIG.GEMINI_API_URL);
+        });
+    </script>
+</body>
+</html>

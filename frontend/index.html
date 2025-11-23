@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÖBB Mobility Insights Dashboard - AI-powered customer feedback analysis">
+    <title>ÖBB Mobility Insights Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/Logo_ÖBB.svg.png" alt="ÖBB Logo" class="logo-image">
+                <div class="header-text">
+                    <h1 class="header-title">Mobility Insights Dashboard</h1>
+                    <p class="header-subtitle">Powered by AI – Hackathon Mobility & AI 2025</p>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#overview" class="nav-link active" data-section="overview">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-text">Overview</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sentiment-trends" class="nav-link" data-section="sentiment-trends">
+                            <span class="nav-icon">📈</span>
+                            <span class="nav-text">Sentiment Trends</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#topic-evolution" class="nav-link" data-section="topic-evolution">
+                            <span class="nav-icon">🔍</span>
+                            <span class="nav-text">Topic Evolution</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#emerging-issues" class="nav-link" data-section="emerging-issues">
+                            <span class="nav-icon">⚠️</span>
+                            <span class="nav-text">Emerging Issues</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#recommendations" class="nav-link" data-section="recommendations">
+                            <span class="nav-icon">💡</span>
+                            <span class="nav-text">Recommendations</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="section-header">
+                    <h2 class="section-title">Overview</h2>
+                    <p class="section-description">High-level insights from customer feedback analysis</p>
+                </div>
+
+                <!-- AI Hot Topic Banner -->
+                <div class="hot-topic-banner" id="hotTopicBanner">
+                    <div class="hot-topic-icon">
+                        <img src="assets/alert-circle.svg" alt="Alert" class="icon-pulse">
+                    </div>
+                    <div class="hot-topic-content">
+                        <div class="hot-topic-header">
+                            <span class="hot-topic-label">AI HOT TOPIC OF THE WEEK</span>
+                            <span class="hot-topic-timestamp" id="hotTopicTimestamp">Updated just now</span>
+                        </div>
+                        <p class="hot-topic-text" id="hotTopicText">
+                            Loading AI-generated insights...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="kpi-grid" id="kpiGrid">
+                    <!-- KPI Cards will be populated by JavaScript -->
+                    <div class="kpi-card" id="kpiTotalFeedback">
+                        <div class="kpi-icon">📝</div>
+                        <div class="kpi-content">
+                            <h3 class="kpi-label">Total Feedback</h3>
+                            <p class="kpi-value">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card" id="kpiAvgSentiment">
+                        <div class="kpi-icon">😊</div>
+                        <div class="kpi-content">
+                            <h3 class="kpi-label">Avg. Sentiment</h3>
+                            <p class="kpi-value">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card" id="kpiActiveIssues">
+                        <div class="kpi-icon">🔔</div>
+                        <div class="kpi-content">
+                            <h3 class="kpi-label">Active Issues</h3>
+                            <p class="kpi-value">--</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card" id="kpiTopTopics">
+                        <div class="kpi-icon">🏷️</div>
+                        <div class="kpi-content">
+                            <h3 class="kpi-label">Top Topics</h3>
+                            <p class="kpi-value">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-container" id="summaryContainer">
+                    <div class="insight-card">
+                        <h3 class="card-title">Summary</h3>
+                        <div class="card-content" id="overviewSummary">
+                            <p>Loading summary data...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sentiment Trends Section -->
+            <section id="sentiment-trends" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Sentiment Trends</h2>
+                    <p class="section-description">Track sentiment patterns over time</p>
+                </div>
+
+                <div class="chart-container" id="sentimentChart">
+                    <div class="chart-placeholder">
+                        <p>Sentiment chart will be rendered here</p>
+                    </div>
+                </div>
+
+                <div class="sentiment-summary-grid">
+                    <div class="insight-card" id="sentimentPositive">
+                        <h4 class="card-subtitle">Positive</h4>
+                        <p class="sentiment-percentage">--</p>
+                    </div>
+                    <div class="insight-card" id="sentimentNeutral">
+                        <h4 class="card-subtitle">Neutral</h4>
+                        <p class="sentiment-percentage">--</p>
+                    </div>
+                    <div class="insight-card" id="sentimentNegative">
+                        <h4 class="card-subtitle">Negative</h4>
+                        <p class="sentiment-percentage">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Topic Evolution Section -->
+            <section id="topic-evolution" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Topic Evolution</h2>
+                    <p class="section-description">Analyze trending topics from customer feedback</p>
+                </div>
+
+                <div class="chart-container" id="topicsChart">
+                    <div class="chart-placeholder">
+                        <p>Topic visualization will be rendered here</p>
+                    </div>
+                </div>
+
+                <div class="topics-list">
+                    <h3 class="subsection-title">Top Topics</h3>
+                    <div id="topicsContainer" class="topics-grid">
+                        <!-- Topic cards will be populated by JavaScript -->
+                        <div class="insight-card topic-placeholder">
+                            <h4 class="card-subtitle">Loading topics...</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emerging Issues Section -->
+            <section id="emerging-issues" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Emerging Issues</h2>
+                    <p class="section-description">Identify and track emerging customer concerns</p>
+                </div>
+
+                <div class="chart-container small" id="issuesChart">
+                    <div class="chart-placeholder">
+                        <p>Issues trend chart will be rendered here</p>
+                    </div>
+                </div>
+
+                <div class="issues-grid" id="issuesContainer">
+                    <!-- Issue cards will be populated by JavaScript -->
+                    <div class="insight-card issue-card">
+                        <div class="issue-severity">
+                            <span class="severity-badge">--</span>
+                        </div>
+                        <h3 class="card-title">Loading issues...</h3>
+                        <p class="card-content">Issue details will appear here</p>
+                        <div class="issue-meta">
+                            <span class="issue-count">-- mentions</span>
+                            <span class="issue-trend">--</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section id="recommendations" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recommendations</h2>
+                    <p class="section-description">Actionable insights to improve customer experience</p>
+                </div>
+
+                <div class="recommendations-container">
+                    <div id="recommendationsList" class="recommendations-list">
+                        <!-- Recommendations will be populated by JavaScript -->
+                        <div class="insight-card recommendation-card">
+                            <div class="recommendation-header">
+                                <span class="recommendation-priority">Loading...</span>
+                                <span class="recommendation-category">--</span>
+                            </div>
+                            <h3 class="card-title">Recommendations loading...</h3>
+                            <p class="card-content">Detailed recommendations will appear here</p>
+                            <div class="recommendation-footer">
+                                <span class="recommendation-impact">Expected Impact: --</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ÖBB Mobility Insights Dashboard | AI Hackathon Project</p>
+            <p class="footer-meta">Data updated: <span id="lastUpdated">--</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
