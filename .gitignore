@@ -9,6 +9,7 @@
 .env.production
 .env.staging
 *.env
+frontend/env-loader.js
 
 # API Keys and Secrets
 **/secrets/

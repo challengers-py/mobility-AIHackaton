@@ -307,7 +307,19 @@
 
             try {
                 console.log('🚀 Enviando request a Gemini...');
-                console.log('Prompt:', prompt);
+                console.log('📝 API Key:', CONFIG.GEMINI_API_KEY);
+                console.log('🌐 URL:', CONFIG.GEMINI_API_URL);
+                console.log('💬 Prompt:', prompt);
+
+                const requestBody = {
+                    contents: [{
+                        parts: [{
+                            text: prompt
+                        }]
+                    }]
+                };
+                
+                console.log('📦 Request body:', JSON.stringify(requestBody, null, 2));
 
                 const response = await fetch(CONFIG.GEMINI_API_URL, {
                     method: 'POST',
@@ -315,25 +327,22 @@
                         'Content-Type': 'application/json',
                         'X-goog-api-key': CONFIG.GEMINI_API_KEY
                     },
-                    body: JSON.stringify({
-                        contents: [{
-                            parts: [{
-                                text: prompt
-                            }]
-                        }]
-                    })
+                    body: JSON.stringify(requestBody)
                 });
 
                 console.log('📡 Response status:', response.status);
+                console.log('📡 Response headers:', Object.fromEntries(response.headers.entries()));
+
+                const responseData = await response.text();
+                console.log('📄 Raw response:', responseData);
 
                 if (!response.ok) {
-                    const errorData = await response.text();
-                    console.error('❌ Error response:', errorData);
-                    throw new Error(`API Error: ${response.status} - ${errorData}`);
+                    console.error('❌ Error response:', responseData);
+                    throw new Error(`API Error: ${response.status} - ${responseData}`);
                 }
 
-                const data = await response.json();
-                console.log('✅ Response data:', data);
+                const data = JSON.parse(responseData);
+                console.log('✅ Parsed response data:', data);
 
                 // Extract generated text
                 const generatedText = data.candidates[0].content.parts[0].text;
@@ -347,12 +356,19 @@
                 console.log('✅ Test exitoso!');
 
             } catch (error) {
-                console.error('❌ Error:', error);
+                console.error('❌ Error completo:', error);
+                
+                let errorMessage = error.message;
+                
+                // Check if it's a CORS error
+                if (error.message.includes('CORS') || error.message.includes('fetch')) {
+                    errorMessage += '<br><br><strong>💡 Posible problema de CORS:</strong> Gemini API no soporta llamadas directas desde el navegador. Necesitas un backend/proxy.';
+                }
                 
                 responseBox.className = 'response-box visible error';
-                responseText.innerHTML = `<strong>❌ Error:</strong><br><br>${error.message}<br><br><small>Revisa la consola del navegador (F12) para más detalles.</small>`;
+                responseText.innerHTML = `<strong>❌ Error:</strong><br><br>${errorMessage}<br><br><small>Revisa la consola del navegador (F12) para más detalles.</small>`;
                 
-                statusIndicator.innerHTML = '<div class="status-indicator error">❌ Error en la API - Verifica tu API key</div>';
+                statusIndicator.innerHTML = '<div class="status-indicator error">❌ Error en la API - Revisa consola (F12)</div>';
             } finally {
                 testBtn.disabled = false;
                 testBtn.innerHTML = '<span>🚀</span><span>Probar Gemini API</span>';
@@ -362,8 +378,10 @@
         // Test on page load
         window.addEventListener('DOMContentLoaded', () => {
             console.log('🔧 Gemini Test Page cargada');
-            console.log('📝 API Key configurada:', CONFIG.GEMINI_API_KEY.substring(0, 20) + '...');
+            console.log('📝 CONFIG object:', CONFIG);
+            console.log('🔑 API Key (primeros 20 chars):', CONFIG.GEMINI_API_KEY ? CONFIG.GEMINI_API_KEY.substring(0, 20) + '...' : 'NO DEFINIDA');
             console.log('🌐 Endpoint:', CONFIG.GEMINI_API_URL);
+            console.log('⚠️ Nota: Si ves errores de CORS, Gemini API requiere llamadas desde servidor, no desde navegador directamente');
         });
     </script>
 </body>

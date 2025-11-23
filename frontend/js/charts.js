@@ -886,7 +886,52 @@ export function generateStackedAreaChart(jsonData, timeRange = 'all') {
 // Horizontal Bar Chart - Top Topics
 // ========================================
 
-export function generateHorizontalBarChart(jsonData) {
+export function generateHorizontalBarChart(jsonData, timeRange = 'all') {
+    // Store data globally on first call
+    if (!globalTopicsData) {
+        globalTopicsData = jsonData;
+    }
+    
+    // Find the most recent date in the dataset to use as reference
+    let maxDate = null;
+    jsonData.data.forEach(entry => {
+        if (entry.date) {
+            const entryDate = new Date(entry.date);
+            if (!maxDate || entryDate > maxDate) {
+                maxDate = entryDate;
+            }
+        }
+    });
+    
+    // If no dates found, use current date
+    const referenceDate = maxDate || new Date();
+    
+    // Calculate date cutoff based on time range
+    let cutoffDate = null;
+    
+    switch(timeRange) {
+        case 'month':
+            cutoffDate = new Date(referenceDate);
+            cutoffDate.setMonth(cutoffDate.getMonth() - 1);
+            break;
+        case 'quarter':
+            cutoffDate = new Date(referenceDate);
+            cutoffDate.setMonth(cutoffDate.getMonth() - 3);
+            break;
+        case '6months':
+            cutoffDate = new Date(referenceDate);
+            cutoffDate.setMonth(cutoffDate.getMonth() - 6);
+            break;
+        case 'year':
+            cutoffDate = new Date(referenceDate);
+            cutoffDate.setFullYear(cutoffDate.getFullYear() - 1);
+            break;
+        case 'all':
+        default:
+            cutoffDate = null; // No filtering
+            break;
+    }
+    
     // Count total mentions for each category
     const categoryCounts = {
         service: 0,
@@ -898,8 +943,21 @@ export function generateHorizontalBarChart(jsonData) {
         positive: 0
     };
     
+    let filteredCount = 0;
+    let totalCount = 0;
+    
     // Count categories from detected_categories in data entries
     jsonData.data.forEach(entry => {
+        totalCount++;
+        
+        // Apply date filter if needed
+        if (cutoffDate && entry.date) {
+            const entryDate = new Date(entry.date);
+            if (entryDate < cutoffDate) return;
+        }
+        
+        filteredCount++;
+        
         if (entry.detected_categories && Array.isArray(entry.detected_categories)) {
             entry.detected_categories.forEach(category => {
                 if (categoryCounts[category] !== undefined) {
@@ -978,7 +1036,7 @@ export function generateHorizontalBarChart(jsonData) {
                     callbacks: {
                         label: function(context) {
                             const value = context.parsed.x;
-                            const percentage = ((value / total) * 100).toFixed(1);
+                            const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : '0.0';
                             return `${value.toLocaleString()} reports (${percentage}%)`;
                         }
                     }
@@ -1015,9 +1073,14 @@ export function generateHorizontalBarChart(jsonData) {
     });
     
     console.log('📊 Horizontal bar chart generated:', {
+        timeRange: timeRange,
+        referenceDate: referenceDate ? referenceDate.toISOString().split('T')[0] : 'N/A',
+        cutoffDate: cutoffDate ? cutoffDate.toISOString().split('T')[0] : 'none',
         categories: labels.length,
+        filteredEntries: filteredCount,
+        totalEntries: totalCount,
         totalReports: total,
-        topCategory: `${labels[0]}: ${data[0]} reports`
+        topCategory: labels.length > 0 ? `${labels[0]}: ${data[0]} reports` : 'N/A'
     });
 }
 
