@@ -7,17 +7,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-<<<<<<< HEAD
 
 RUTA_DRIVER = r"C:\Drivers\msedgedriver.exe" # We declare the path to the Edge WebDriver
 BASE_URL = "https://es.trustpilot.com/review/tickets.oebb.at?languages=all" # The base URL of the Trust Pilot OBB website
 
 
 def start_driver():
-    '''
-    function to start the Edge WebDriver
+    """
+    function to start the Edge webdriver
     :return: webdriver.Edge instance
-    '''
+    """
     options = webdriver.EdgeOptions() # Instatiate Edge options
     #options.add_argument('--start-maximized')
     options.add_argument('--headless') # Run in headless mode
@@ -147,10 +146,10 @@ def click_next(driver):
 
 def scrapping_trustpilot_profesional():
 
-    '''
+    """
     function to scrape Trust Pilot reviews for OBB
     :return:
-    '''
+    """
 
     driver = start_driver()
     if not driver: return []
@@ -247,8 +246,7 @@ def scrapping_trustpilot_profesional():
                         asunto = title_elem.text.strip()
                     except:
                         try:
-                            title_elem = card.find_element(By.CSS_SELECTOR,
-                                                           "[data-service-review-title-typography='true']")
+                            title_elem = card.find_element(By.CSS_SELECTOR, "[data-service-review-title-typography='true']")
                             asunto = title_elem.text.strip()
                         except:
                             asunto = "Sin Título"
