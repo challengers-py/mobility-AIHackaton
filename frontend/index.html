@@ -210,6 +210,28 @@
                     </div>
                 </div>
 
+                <!-- Positive Feedback Distribution -->
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2 class="section-title">Positive Feedback Distribution</h2>
+                    <p class="section-description">Breakdown of praise categories from customer reviews</p>
+                </div>
+
+                <div class="doughnut-chart-wrapper">
+                    <div class="chart-container doughnut-chart">
+                        <canvas id="positiveDoughnutCanvas"></canvas>
+                    </div>
+                    
+                    <!-- Positive Category Legend Table -->
+                    <div class="category-legend-table">
+                        <h3 class="legend-title">Praise Categories</h3>
+                        <table class="category-table">
+                            <tbody id="positiveCategoryTableBody">
+                                <!-- Will be populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- Time Range Selector -->
                 <div class="section-header" style="margin-top: 3rem;">
                     <h2 class="section-title">Temporal Evolution by Category</h2>
@@ -354,7 +376,9 @@
     <script src="env-loader.js"></script>
     <!-- Load configuration -->
     <script src="js/config.js"></script>
+    <!-- Load charts module -->
+    <script type="module" src="js/charts.js"></script>
     <!-- Load main application -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
