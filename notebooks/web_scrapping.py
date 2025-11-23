@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
+<<<<<<< HEAD
 
 RUTA_DRIVER = r"C:\Drivers\msedgedriver.exe" # We declare the path to the Edge WebDriver
 BASE_URL = "https://es.trustpilot.com/review/tickets.oebb.at?languages=all" # The base URL of the Trust Pilot OBB website
@@ -21,10 +22,12 @@ def start_driver():
     #options.add_argument('--start-maximized')
     options.add_argument('--headless') # Run in headless mode
 
+
     try:
         service = EdgeService(executable_path=RUTA_DRIVER)
         return webdriver.Edge(service=service, options=options)
     except Exception as e:
+
         print(f"Error al iniciar driver: {e}")
         return None
 
@@ -46,6 +49,7 @@ def select_rating(driver, rating):
     """
     Selects the checkbox for the specified rating.
     rating: 1 to 5
+
     """
     rating_map = {
         5: "star-filter-page-filter-five",
@@ -61,9 +65,11 @@ def select_rating(driver, rating):
             return False
 
         # Search the checkbox element
+
         checkbox = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, checkbox_id))
         )
+
 
         # If not selected, click on it
         if not checkbox.is_selected():
@@ -78,9 +84,11 @@ def select_rating(driver, rating):
         return False
 
 
+
 def unselect_rating(driver, rating):
     """
     Unselect the specified rating's checkbox
+
     """
     rating_map = {
         5: "star-filter-page-filter-five",
@@ -97,7 +105,9 @@ def unselect_rating(driver, rating):
 
         checkbox = driver.find_element(By.ID, checkbox_id)
 
+
         # If selected, click to unselect it
+
         if checkbox.is_selected():
             label = driver.find_element(By.CSS_SELECTOR, f"label[for='{checkbox_id}']")
             driver.execute_script("arguments[0].click();", label)
@@ -117,15 +127,18 @@ def click_next(driver):
     try:
         # Look for the button "Next"
         next_button = WebDriverWait(driver, 5).until(
+
             EC.presence_of_element_located((By.CSS_SELECTOR, "a.link_internal__Eam_b.button_button__EM6gX[name='pagination-button-next']"))
         )
 
         # Verificar si el botón está deshabilitado
+
         if "button_disabled" in next_button.get_attribute("class"):
             return False
 
         # Hacer clic usando JavaScript para evitar problemas de elementos superpuestos
         driver.execute_script("arguments[0].click();", next_button)
+
         time.sleep(3)  # Esperar a que cargue la siguiente página
         return True
     except (TimeoutException, NoSuchElementException):
@@ -133,10 +146,12 @@ def click_next(driver):
 
 
 def scrapping_trustpilot_profesional():
+
     '''
     function to scrape Trust Pilot reviews for OBB
     :return:
     '''
+
     driver = start_driver()
     if not driver: return []
 
@@ -157,9 +172,11 @@ def scrapping_trustpilot_profesional():
 
         # Deseleccionar cualquier rating previo y seleccionar el actual
         if rating < 5:
+
             unselect_rating(driver, rating + 1)
 
         if not select_rating(driver, rating):
+
             print(f"   ❌ No se pudo seleccionar el rating {rating}. Saltando...")
             continue
 
@@ -205,7 +222,9 @@ def scrapping_trustpilot_profesional():
                     try:
                         date_elem = card.find_element(By.TAG_NAME, "time")
                         fecha_raw = date_elem.get_attribute("datetime")
+
                         fecha_limpia = clean_dates(fecha_raw)
+
                     except:
                         fecha_limpia = None
 
@@ -281,7 +300,9 @@ def scrapping_trustpilot_profesional():
 
             # Intentar ir a la siguiente página usando el botón
             if page < 10:
+
                 if not click_next(driver):
+
                     print(f"   ℹ️ No hay botón 'Siguiente'. Fin de páginas para {rating} estrellas.")
                     break
                 page += 1
