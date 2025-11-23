@@ -1,0 +1,733 @@
+{
+  "status": "success",
+  "pagination": {
+    "current_page": 1,
+    "items_per_page": 50,
+    "total_pages": 100,
+    "total_items": 5000
+  },
+  "statistics": [
+    {
+      "category": "service",
+      "total_mentions": 1780
+    },
+    {
+      "category": "delays",
+      "total_mentions": 936
+    },
+    {
+      "category": "infrastructure",
+      "total_mentions": 573
+    },
+    {
+      "category": "usuario",
+      "total_mentions": 458
+    },
+    {
+      "category": "hygiene",
+      "total_mentions": 358
+    },
+    {
+      "category": "comfort",
+      "total_mentions": 329
+    },
+    {
+      "category": "sin_categoria",
+      "total_mentions": 1279
+    }
+  ],
+  "data": [
+    {
+      "row_id": 1,
+      "date": "2025-12-03",
+      "subject": "trato poco amable por parte del personal de control",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: trato poco amable por parte del personal de control. Fue un inconveniente serio porque no...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "personal"
+        ]
+      }
+    },
+    {
+      "row_id": 2,
+      "date": "2024-10-25",
+      "subject": "calefacción averiada",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: calefacción averiada. Esto generó bastante estrés ya que tenía compromisos import...",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "averia"
+        ]
+      }
+    },
+    {
+      "row_id": 3,
+      "date": "2025-08-20",
+      "subject": "una sugerencia para mejorar la información sobre retrasos",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: una sugerencia para mejorar la información sobre retrasos. Esto generó bastant...",
+      "detected_categories": [
+        "delays",
+        "service"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ],
+        "service": [
+          "informa"
+        ]
+      }
+    },
+    {
+      "row_id": 4,
+      "date": "2024-11-24",
+      "subject": "ventanas sucias",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: ventanas sucias. Esto generó bastante estrés ya que tenía compromisos important...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 5,
+      "date": "2025-02-25",
+      "subject": "dudas sobre la tarjeta de descuento",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: dudas sobre la tarjeta de descuento. El problema se agravó porque no había alternativas...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "tarjeta",
+          "duda"
+        ]
+      }
+    },
+    {
+      "row_id": 6,
+      "date": "2025-01-24",
+      "subject": "la rampa para silla de ruedas no estaba disponible",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: la rampa para silla de ruedas no estaba disponible. Lo más complicado fue que dependía de...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 7,
+      "date": "2025-07-23",
+      "subject": "haber recibido información poco clara del servicio de objetos perdidos",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: haber recibido información poco clara del servicio de objetos perdidos. Esto generó basta...",
+      "detected_categories": [
+        "service",
+        "usuario"
+      ],
+      "keywords_found": {
+        "service": [
+          "informa"
+        ],
+        "usuario": [
+          "perdido"
+        ]
+      }
+    },
+    {
+      "row_id": 8,
+      "date": "2024-10-24",
+      "subject": "la cancelación del tren por condiciones meteorológicas",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la cancelación del tren por condiciones meteorológicas. Fue un inconveniente serio por...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 9,
+      "date": "2023-04-20",
+      "subject": "un asiento reservado ocupado por otra persona",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un asiento reservado ocupado por otra persona. Fue un inconveniente serio porque no re...",
+      "detected_categories": [
+        "comfort",
+        "service"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "asiento"
+        ],
+        "service": [
+          "reserva"
+        ]
+      }
+    },
+    {
+      "row_id": 10,
+      "date": "2023-11-16",
+      "subject": "baños sucios o averiados",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: baños sucios o averiados. La situación fue especialmente problemática porque afectó toda mi ...",
+      "detected_categories": [
+        "hygiene",
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "sucio"
+        ],
+        "infrastructure": [
+          "averia"
+        ]
+      }
+    },
+    {
+      "row_id": 11,
+      "date": "2025-06-02",
+      "subject": "haber perdido una cartera",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: haber perdido una cartera. La situación fue especialmente problemática porque afectó toda...",
+      "detected_categories": [
+        "usuario"
+      ],
+      "keywords_found": {
+        "usuario": [
+          "perdido"
+        ]
+      }
+    },
+    {
+      "row_id": 12,
+      "date": "2023-09-08",
+      "subject": "haber perdido una cartera",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: haber perdido una cartera. El problema se agravó porque no había alternativas evident...",
+      "detected_categories": [
+        "usuario"
+      ],
+      "keywords_found": {
+        "usuario": [
+          "perdido"
+        ]
+      }
+    },
+    {
+      "row_id": 13,
+      "date": "2024-05-16",
+      "subject": "problemas con billete para perro",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: problemas con billete para perro. La situación fue especialmente problemática porque afectó ...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete"
+        ]
+      }
+    },
+    {
+      "row_id": 14,
+      "date": "2024-10-15",
+      "subject": "un retraso causado por problemas técnicos en el tren",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un retraso causado por problemas técnicos en el tren. Lo más complicado fue que depend...",
+      "detected_categories": [
+        "delays"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ]
+      }
+    },
+    {
+      "row_id": 15,
+      "date": "2025-10-09",
+      "subject": "una propuesta para mejorar la accesibilidad",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: una propuesta para mejorar la accesibilidad. Esto generó bastante estrés ya que tenía c...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 16,
+      "date": "2023-02-24",
+      "subject": "un retraso debido al embarque lento por exceso de pasajeros",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: un retraso debido al embarque lento por exceso de pasajeros. Lo más complicado fue que de...",
+      "detected_categories": [
+        "delays"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso",
+          "lento"
+        ]
+      }
+    },
+    {
+      "row_id": 17,
+      "date": "2025-10-26",
+      "subject": "la zona reservada para silla de ruedas estaba ocupada",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: la zona reservada para silla de ruedas estaba ocupada. Esto generó bastante est...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "reserva"
+        ]
+      }
+    },
+    {
+      "row_id": 18,
+      "date": "2023-06-03",
+      "subject": "un retraso causado por una avería en la vía",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: un retraso causado por una avería en la vía. El problema se agravó porque no ha...",
+      "detected_categories": [
+        "delays"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ]
+      }
+    },
+    {
+      "row_id": 19,
+      "date": "2023-11-21",
+      "subject": "un retraso causado por problemas técnicos en el tren",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un retraso causado por problemas técnicos en el tren. Lo más complicado fue que d...",
+      "detected_categories": [
+        "delays"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ]
+      }
+    },
+    {
+      "row_id": 20,
+      "date": "2024-02-28",
+      "subject": "zonas resbaladizas en el andén",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: zonas resbaladizas en el andén. La situación fue especialmente problemática porque afec...",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "resbaladiz"
+        ]
+      }
+    },
+    {
+      "row_id": 21,
+      "date": "2023-11-03",
+      "subject": "las guías táctiles estaban dañadas",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: las guías táctiles estaban dañadas. El problema se agravó porque no había alternativas...",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "dañ"
+        ]
+      }
+    },
+    {
+      "row_id": 22,
+      "date": "2025-06-18",
+      "subject": "problemas con billete para perro",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: problemas con billete para perro. Lo más complicado fue que dependía de la puntua...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete"
+        ]
+      }
+    },
+    {
+      "row_id": 23,
+      "date": "2024-05-15",
+      "subject": "problemas al comprar el billete online",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: problemas al comprar el billete online. La situación fue especialmente problemática porque a...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete"
+        ]
+      }
+    },
+    {
+      "row_id": 24,
+      "date": "2025-04-25",
+      "subject": "el botón de emergencia no funcionaba",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: el botón de emergencia no funcionaba. Lo más complicado fue que dependía de la pu...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 25,
+      "date": "2024-10-21",
+      "subject": "un asiento reservado ocupado por otra persona",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: un asiento reservado ocupado por otra persona. Esto generó bastante estrés ya ...",
+      "detected_categories": [
+        "comfort",
+        "service"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "asiento"
+        ],
+        "service": [
+          "reserva"
+        ]
+      }
+    },
+    {
+      "row_id": 26,
+      "date": "2023-02-07",
+      "subject": "una sugerencia para añadir más espacios para bicicletas",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: una sugerencia para añadir más espacios para bicicletas. El problema se agravó porque no ...",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "bicicleta"
+        ]
+      }
+    },
+    {
+      "row_id": 27,
+      "date": "2023-09-26",
+      "subject": "una propuesta para mejorar la plataforma de venta de billetes",
+      "preview": "Me gustaría relatarles una situación que me afectó bastante: una propuesta para mejorar la plataforma de venta de billetes. La situación fue especialm...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete"
+        ]
+      }
+    },
+    {
+      "row_id": 28,
+      "date": "2023-10-05",
+      "subject": "un retraso de más de 30 minutos pese a que se había informado puntualidad",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: un retraso de más de 30 minutos pese a que se había informado puntualidad. Lo más comp...",
+      "detected_categories": [
+        "delays",
+        "service"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ],
+        "service": [
+          "informa"
+        ]
+      }
+    },
+    {
+      "row_id": 29,
+      "date": "2024-05-12",
+      "subject": "falta de ayuda para personas con movilidad reducida",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: falta de ayuda para personas con movilidad reducida. Esto generó bastante estrés ...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 30,
+      "date": "2023-04-25",
+      "subject": "papeleras sin vaciar",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: papeleras sin vaciar. Fue un inconveniente serio porque no recibí información clara en...",
+      "detected_categories": [
+        "hygiene"
+      ],
+      "keywords_found": {
+        "hygiene": [
+          "papelera"
+        ]
+      }
+    },
+    {
+      "row_id": 31,
+      "date": "2024-09-14",
+      "subject": "falta de anuncios en la estación",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: falta de anuncios en la estación. La situación fue especialmente problemática porque af...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 32,
+      "date": "2025-01-19",
+      "subject": "la altura del tren hacía difícil subir sin ayuda",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: la altura del tren hacía difícil subir sin ayuda. La situación fue especialmente probl...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 33,
+      "date": "2023-01-21",
+      "subject": "haber perdido un cochecito infantil",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: haber perdido un cochecito infantil. El problema se agravó porque no había altern...",
+      "detected_categories": [
+        "usuario"
+      ],
+      "keywords_found": {
+        "usuario": [
+          "perdido"
+        ]
+      }
+    },
+    {
+      "row_id": 34,
+      "date": "2023-03-19",
+      "subject": "dudas sobre viajes escolares",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: dudas sobre viajes escolares. La situación fue especialmente problemática porq...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "duda"
+        ]
+      }
+    },
+    {
+      "row_id": 35,
+      "date": "2023-11-08",
+      "subject": "señalización confusa",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: señalización confusa. La situación fue especialmente problemática porque afectó...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 36,
+      "date": "2025-02-19",
+      "subject": "la zona reservada para silla de ruedas estaba ocupada",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: la zona reservada para silla de ruedas estaba ocupada. La situación fue especialmente p...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "reserva"
+        ]
+      }
+    },
+    {
+      "row_id": 37,
+      "date": "2023-07-27",
+      "subject": "información contradictoria sobre el retraso",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: información contradictoria sobre el retraso. Esto generó bastante estrés ya qu...",
+      "detected_categories": [
+        "delays",
+        "service"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ],
+        "service": [
+          "informa"
+        ]
+      }
+    },
+    {
+      "row_id": 38,
+      "date": "2024-10-11",
+      "subject": "una solicitud de compensación rechazada",
+      "preview": "Me dirijo a ustedes para describir un incidente ocurrido en el tren: una solicitud de compensación rechazada. Esto generó bastante estrés ya que tenía...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 39,
+      "date": "2024-04-14",
+      "subject": "problemas al comprar el billete online",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: problemas al comprar el billete online. Esto generó bastante estrés ya que tenía compro...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete"
+        ]
+      }
+    },
+    {
+      "row_id": 40,
+      "date": "2025-11-01",
+      "subject": "confusión sobre zonas tarifarias",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: confusión sobre zonas tarifarias. El problema se agravó porque no había alternativas ev...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 41,
+      "date": "2023-01-25",
+      "subject": "una solicitud de compensación rechazada",
+      "preview": "Me pongo en contacto porque he vivido una situación complicada: una solicitud de compensación rechazada. Fue un inconveniente serio porque no recibí i...",
+      "detected_categories": [
+        "sin_categoria"
+      ],
+      "keywords_found": {}
+    },
+    {
+      "row_id": 42,
+      "date": "2023-05-16",
+      "subject": "una duda sobre reembolso del billete",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: una duda sobre reembolso del billete. Esto generó bastante estrés ya que tenía compromisos i...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "billete",
+          "duda"
+        ]
+      }
+    },
+    {
+      "row_id": 43,
+      "date": "2025-12-14",
+      "subject": "una duda sobre compensación por retraso",
+      "preview": "He experimentado un inconveniente durante mi viaje que deseo compartir: una duda sobre compensación por retraso. Lo más complicado fue que dependía de...",
+      "detected_categories": [
+        "delays",
+        "service"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ],
+        "service": [
+          "duda"
+        ]
+      }
+    },
+    {
+      "row_id": 44,
+      "date": "2025-03-15",
+      "subject": "un retraso causado por problemas técnicos en el tren",
+      "preview": "Quiero detallar un problema que tuve recientemente en el tren: un retraso causado por problemas técnicos en el tren. La situación fue especialmente pr...",
+      "detected_categories": [
+        "delays"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ]
+      }
+    },
+    {
+      "row_id": 45,
+      "date": "2024-12-27",
+      "subject": "una escalera mecánica de la estación averiada",
+      "preview": "Quisiera explicar lo que ocurrió durante mi último viaje: una escalera mecánica de la estación averiada. Lo más complicado fue que dependía de la punt...",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "averia"
+        ]
+      }
+    },
+    {
+      "row_id": 46,
+      "date": "2025-04-19",
+      "subject": "información contradictoria entre web y app",
+      "preview": "Les escribo para informar de algo que me sucedió en el trayecto: información contradictoria entre web y app. El problema se agravó porque no había alt...",
+      "detected_categories": [
+        "service"
+      ],
+      "keywords_found": {
+        "service": [
+          "informa"
+        ]
+      }
+    },
+    {
+      "row_id": 47,
+      "date": "2025-08-07",
+      "subject": "normas de transporte de bicicletas poco claras",
+      "preview": "En mi último trayecto ocurrió algo que considero importante comunicar: normas de transporte de bicicletas poco claras. Lo más complicado fue que depen...",
+      "detected_categories": [
+        "infrastructure"
+      ],
+      "keywords_found": {
+        "infrastructure": [
+          "bicicleta"
+        ]
+      }
+    },
+    {
+      "row_id": 48,
+      "date": "2024-10-06",
+      "subject": "un retraso de más de 30 minutos pese a que se había informado puntualidad",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: un retraso de más de 30 minutos pese a que se había informado puntualidad. Esto g...",
+      "detected_categories": [
+        "delays",
+        "service"
+      ],
+      "keywords_found": {
+        "delays": [
+          "retraso"
+        ],
+        "service": [
+          "informa"
+        ]
+      }
+    },
+    {
+      "row_id": 49,
+      "date": "2025-08-09",
+      "subject": "haber perdido un cochecito infantil",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: haber perdido un cochecito infantil. Esto generó bastante estrés ya que tenía com...",
+      "detected_categories": [
+        "usuario"
+      ],
+      "keywords_found": {
+        "usuario": [
+          "perdido"
+        ]
+      }
+    },
+    {
+      "row_id": 50,
+      "date": "2023-07-24",
+      "subject": "aire acondicionado funcionando solo en algunos vagones",
+      "preview": "Tuve un problema durante el viaje y considero necesario notificarlo: aire acondicionado funcionando solo en algunos vagones. Esto generó bastante estr...",
+      "detected_categories": [
+        "comfort"
+      ],
+      "keywords_found": {
+        "comfort": [
+          "aire"
+        ]
+      }
+    }
+  ],
+  "processing_time": 0.1169
+}
