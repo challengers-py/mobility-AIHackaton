@@ -155,50 +155,116 @@
             <!-- Sentiment Trends Section -->
             <section id="sentiment-trends" class="content-section">
                 <div class="section-header">
-                    <h2 class="section-title">Issue Severity Analysis</h2>
-                    <p class="section-description">Distribution of complaints by severity level</p>
+                    <h2 class="section-title">Category Distribution Analysis</h2>
+                    <p class="section-description">Overview of all feedback categories</p>
+                </div>
+
+                <!-- Doughnut Chart for Category Distribution -->
+                <div class="doughnut-chart-wrapper">
+                    <div class="chart-container doughnut-chart">
+                        <canvas id="doughnutCanvas"></canvas>
+                    </div>
+                    
+                    <!-- Category Legend Table -->
+                    <div class="category-legend-table">
+                        <h3 class="legend-title">Categories</h3>
+                        <table class="category-table">
+                            <tbody>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #FF6B6B;"></td>
+                                    <td class="category-name">Service</td>
+                                    <td class="category-count" id="count-service">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #FFA07A;"></td>
+                                    <td class="category-name">Delays</td>
+                                    <td class="category-count" id="count-delays">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #FFD93D;"></td>
+                                    <td class="category-name">Infrastructure</td>
+                                    <td class="category-count" id="count-infrastructure">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #A8E6CF;"></td>
+                                    <td class="category-name">User</td>
+                                    <td class="category-count" id="count-user">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #87CEEB;"></td>
+                                    <td class="category-name">Hygiene</td>
+                                    <td class="category-count" id="count-hygiene">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #DDA0DD;"></td>
+                                    <td class="category-name">Comfort</td>
+                                    <td class="category-count" id="count-comfort">--</td>
+                                </tr>
+                                <tr class="category-row">
+                                    <td class="color-indicator" style="background-color: #90EE90;"></td>
+                                    <td class="category-name">Positive</td>
+                                    <td class="category-count" id="count-positive">--</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Time Range Selector -->
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2 class="section-title">Temporal Evolution by Category</h2>
+                    <p class="section-description">Track how categories evolve over time</p>
+                </div>
+
+                <div class="time-range-selector">
+                    <label class="time-range-label">Time Range:</label>
+                    <div class="time-range-buttons">
+                        <button class="time-range-btn" data-range="month">Month</button>
+                        <button class="time-range-btn" data-range="quarter">Quarter</button>
+                        <button class="time-range-btn" data-range="6months">6 Months</button>
+                        <button class="time-range-btn" data-range="year">Year</button>
+                        <button class="time-range-btn active" data-range="all">All Time</button>
+                    </div>
                 </div>
 
                 <div class="chart-container" id="sentimentChart">
-                    <div class="chart-placeholder">
-                        <p>Severity distribution chart will be rendered here</p>
-                    </div>
-                </div>
-
-                <div class="sentiment-summary-grid">
-                    <div class="insight-card" id="sentimentNegative">
-                        <h4 class="card-subtitle">High Severity</h4>
-                        <p class="sentiment-percentage">--</p>
-                        <p style="color: var(--dark-gray); font-size: 0.75rem; margin-top: 0.5rem;">Critical operational issues</p>
-                    </div>
-                    <div class="insight-card" id="sentimentNeutral">
-                        <h4 class="card-subtitle">Medium Severity</h4>
-                        <p class="sentiment-percentage">--</p>
-                        <p style="color: var(--dark-gray); font-size: 0.75rem; margin-top: 0.5rem;">Quality & maintenance issues</p>
-                    </div>
-                    <div class="insight-card" id="sentimentPositive">
-                        <h4 class="card-subtitle">Low Severity</h4>
-                        <p class="sentiment-percentage">--</p>
-                        <p style="color: var(--dark-gray); font-size: 0.75rem; margin-top: 0.5rem;">User-related issues</p>
-                    </div>
+                    <canvas id="sentimentCanvas"></canvas>
                 </div>
             </section>
 
             <!-- Topic Evolution Section -->
             <section id="topic-evolution" class="content-section">
                 <div class="section-header">
-                    <h2 class="section-title">Topic Evolution</h2>
-                    <p class="section-description">Analyze trending topics from customer feedback</p>
+                    <h2 class="section-title">Topic Evolution Over Time</h2>
+                    <p class="section-description">Stacked area chart showing how topics evolve chronologically</p>
                 </div>
 
-                <div class="chart-container" id="topicsChart">
-                    <div class="chart-placeholder">
-                        <p>Topic visualization will be rendered here</p>
+                <div class="time-range-selector">
+                    <label class="time-range-label">Time Range:</label>
+                    <div class="time-range-buttons">
+                        <button class="time-range-btn-topics" data-range="month">Month</button>
+                        <button class="time-range-btn-topics" data-range="quarter">Quarter</button>
+                        <button class="time-range-btn-topics" data-range="6months">6 Months</button>
+                        <button class="time-range-btn-topics" data-range="year">Year</button>
+                        <button class="time-range-btn-topics active" data-range="all">All Time</button>
                     </div>
                 </div>
 
-                <div class="topics-list">
-                    <h3 class="subsection-title">Top Topics</h3>
+                <div class="chart-container" id="topicsChart">
+                    <canvas id="stackedAreaCanvas"></canvas>
+                </div>
+
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2 class="section-title">Top Topics Ranking</h2>
+                    <p class="section-description">Most frequent topics in customer feedback</p>
+                </div>
+
+                <div class="chart-container" id="topTopicsChart" style="min-height: 450px;">
+                    <canvas id="horizontalBarCanvas"></canvas>
+                </div>
+
+                <div class="topics-list" style="margin-top: 3rem;">
+                    <h3 class="subsection-title">Topic Statistics</h3>
                     <div id="topicsContainer" class="topics-grid">
                         <!-- Topic cards will be populated by JavaScript -->
                         <div class="insight-card topic-placeholder">
@@ -212,13 +278,22 @@
             <section id="emerging-issues" class="content-section">
                 <div class="section-header">
                     <h2 class="section-title">Emerging Issues</h2>
-                    <p class="section-description">Identify and track emerging customer concerns</p>
+                    <p class="section-description">Track growth trends for each issue category over time</p>
                 </div>
 
-                <div class="chart-container small" id="issuesChart">
-                    <div class="chart-placeholder">
-                        <p>Issues trend chart will be rendered here</p>
+                <div class="time-range-selector">
+                    <label class="time-range-label">Time Range:</label>
+                    <div class="time-range-buttons">
+                        <button class="time-range-btn-issues" data-range="month">Month</button>
+                        <button class="time-range-btn-issues" data-range="quarter">Quarter</button>
+                        <button class="time-range-btn-issues" data-range="6months">6 Months</button>
+                        <button class="time-range-btn-issues" data-range="year">Year</button>
+                        <button class="time-range-btn-issues active" data-range="all">All Time</button>
                     </div>
+                </div>
+
+                <div class="chart-container" id="issuesChart">
+                    <canvas id="issuesTrendCanvas"></canvas>
                 </div>
 
                 <div class="issues-grid" id="issuesContainer">
@@ -273,6 +348,8 @@
     </footer>
 
     <!-- JavaScript -->
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <!-- Load environment variables first (dev only) -->
     <script src="env-loader.js"></script>
     <!-- Load configuration -->
