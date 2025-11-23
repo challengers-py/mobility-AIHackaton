@@ -7,42 +7,45 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-# --- CONFIGURACIÓN ---
-# Ajusta esta ruta a donde tienes tu msedgedriver.exe
-RUTA_DRIVER = r"C:\Drivers\msedgedriver.exe"
-BASE_URL = "https://es.trustpilot.com/review/tickets.oebb.at?languages=all"
+
+RUTA_DRIVER = r"C:\Drivers\msedgedriver.exe" # We declare the path to the Edge WebDriver
+BASE_URL = "https://es.trustpilot.com/review/tickets.oebb.at?languages=all" # The base URL of the Trust Pilot OBB website
 
 
 def start_driver():
-    options = webdriver.EdgeOptions()
-    options.add_argument('--start-maximized')
-    # options.add_argument('--headless') # Descomenta para que no se vea la ventana
+    '''
+    function to start the Edge WebDriver
+    :return: webdriver.Edge instance
+    '''
+    options = webdriver.EdgeOptions() # Instatiate Edge options
+    #options.add_argument('--start-maximized')
+    options.add_argument('--headless') # Run in headless mode
 
     try:
         service = EdgeService(executable_path=RUTA_DRIVER)
         return webdriver.Edge(service=service, options=options)
     except Exception as e:
-        print(f"❌ Error al iniciar driver: {e}")
+        print(f"Error al iniciar driver: {e}")
         return None
 
 
-def limpiar_fecha(fecha_iso_str):
+def clean_dates(date_iso_str):
     """
-    Convierte '2024-11-22T14:30:00.000Z' a '2024-11-22'
+    Casts '2024-11-22T14:30:00.000Z' a '2024-11-22'
     """
-    if not fecha_iso_str:
+    if not date_iso_str:
         return None
     try:
         # Tomamos solo los primeros 10 caracteres (YYYY-MM-DD)
-        return fecha_iso_str[:10]
+        return date_iso_str[:10]
     except:
-        return fecha_iso_str
+        return date_iso_str
 
 
-def seleccionar_rating(driver, rating):
+def select_rating(driver, rating):
     """
-    Selecciona el checkbox del rating especificado.
-    rating: número del 1 al 5
+    Selects the checkbox for the specified rating.
+    rating: 1 to 5
     """
     rating_map = {
         5: "star-filter-page-filter-five",
@@ -57,17 +60,17 @@ def seleccionar_rating(driver, rating):
         if not checkbox_id:
             return False
 
-        # Buscar el checkbox
+        # Search the checkbox element
         checkbox = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, checkbox_id))
         )
 
-        # Si no está seleccionado, hacer clic
+        # If not selected, click on it
         if not checkbox.is_selected():
-            # Hacer clic en el label asociado (más confiable que el checkbox directamente)
+            # Click on the associated label
             label = driver.find_element(By.CSS_SELECTOR, f"label[for='{checkbox_id}']")
             driver.execute_script("arguments[0].click();", label)
-            time.sleep(2)  # Esperar a que cargue el contenido filtrado
+            time.sleep(2)  # Wait for the filtered content to load
 
         return True
     except Exception as e:
@@ -75,9 +78,9 @@ def seleccionar_rating(driver, rating):
         return False
 
 
-def deseleccionar_rating(driver, rating):
+def unselect_rating(driver, rating):
     """
-    Deselecciona el checkbox del rating especificado.
+    Unselect the specified rating's checkbox
     """
     rating_map = {
         5: "star-filter-page-filter-five",
@@ -94,7 +97,7 @@ def deseleccionar_rating(driver, rating):
 
         checkbox = driver.find_element(By.ID, checkbox_id)
 
-        # Si está seleccionado, hacer clic para deseleccionar
+        # If selected, click to unselect it
         if checkbox.is_selected():
             label = driver.find_element(By.CSS_SELECTOR, f"label[for='{checkbox_id}']")
             driver.execute_script("arguments[0].click();", label)
@@ -105,23 +108,24 @@ def deseleccionar_rating(driver, rating):
         return False
 
 
-def click_siguiente(driver):
+def click_next(driver):
     """
-    Hace clic en el botón 'Siguiente' para ir a la siguiente página.
-    Retorna True si se pudo hacer clic, False si no existe el botón.
+    Clicks on the button 'Next' to go to the next page.
+    :returns
+    True if clicked, False if the button does not exist.
     """
     try:
-        # Buscar el botón "Siguiente"
-        siguiente_btn = WebDriverWait(driver, 5).until(
+        # Look for the button "Next"
+        next_button = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "a.link_internal__Eam_b.button_button__EM6gX[name='pagination-button-next']"))
         )
 
         # Verificar si el botón está deshabilitado
-        if "button_disabled" in siguiente_btn.get_attribute("class"):
+        if "button_disabled" in next_button.get_attribute("class"):
             return False
 
         # Hacer clic usando JavaScript para evitar problemas de elementos superpuestos
-        driver.execute_script("arguments[0].click();", siguiente_btn)
+        driver.execute_script("arguments[0].click();", next_button)
         time.sleep(3)  # Esperar a que cargue la siguiente página
         return True
     except (TimeoutException, NoSuchElementException):
@@ -129,6 +133,10 @@ def click_siguiente(driver):
 
 
 def scrapping_trustpilot_profesional():
+    '''
+    function to scrape Trust Pilot reviews for OBB
+    :return:
+    '''
     driver = start_driver()
     if not driver: return []
 
@@ -149,9 +157,9 @@ def scrapping_trustpilot_profesional():
 
         # Deseleccionar cualquier rating previo y seleccionar el actual
         if rating < 5:
-            deseleccionar_rating(driver, rating + 1)
+            unselect_rating(driver, rating + 1)
 
-        if not seleccionar_rating(driver, rating):
+        if not select_rating(driver, rating):
             print(f"   ❌ No se pudo seleccionar el rating {rating}. Saltando...")
             continue
 
@@ -197,7 +205,7 @@ def scrapping_trustpilot_profesional():
                     try:
                         date_elem = card.find_element(By.TAG_NAME, "time")
                         fecha_raw = date_elem.get_attribute("datetime")
-                        fecha_limpia = limpiar_fecha(fecha_raw)
+                        fecha_limpia = clean_dates(fecha_raw)
                     except:
                         fecha_limpia = None
 
@@ -273,7 +281,7 @@ def scrapping_trustpilot_profesional():
 
             # Intentar ir a la siguiente página usando el botón
             if page < 10:
-                if not click_siguiente(driver):
+                if not click_next(driver):
                     print(f"   ℹ️ No hay botón 'Siguiente'. Fin de páginas para {rating} estrellas.")
                     break
                 page += 1
