@@ -154,7 +154,29 @@
 
             <!-- Sentiment Trends Section -->
             <section id="sentiment-trends" class="content-section">
+                <!-- Temporal Evolution by Category - MOVED TO TOP -->
                 <div class="section-header">
+                    <h2 class="section-title">Temporal Evolution by Category</h2>
+                    <p class="section-description">Track how categories evolve over time</p>
+                </div>
+
+                <div class="time-range-selector">
+                    <label class="time-range-label">Time Range:</label>
+                    <div class="time-range-buttons">
+                        <button class="time-range-btn" data-range="month">Month</button>
+                        <button class="time-range-btn" data-range="quarter">Quarter</button>
+                        <button class="time-range-btn" data-range="6months">6 Months</button>
+                        <button class="time-range-btn" data-range="year">Year</button>
+                        <button class="time-range-btn active" data-range="all">All Time</button>
+                    </div>
+                </div>
+
+                <div class="chart-container" id="sentimentChart">
+                    <canvas id="sentimentCanvas"></canvas>
+                </div>
+
+                <!-- Category Distribution Analysis -->
+                <div class="section-header" style="margin-top: 3rem;">
                     <h2 class="section-title">Category Distribution Analysis</h2>
                     <p class="section-description">Overview of all feedback categories</p>
                 </div>
@@ -230,27 +252,6 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-
-                <!-- Time Range Selector -->
-                <div class="section-header" style="margin-top: 3rem;">
-                    <h2 class="section-title">Temporal Evolution by Category</h2>
-                    <p class="section-description">Track how categories evolve over time</p>
-                </div>
-
-                <div class="time-range-selector">
-                    <label class="time-range-label">Time Range:</label>
-                    <div class="time-range-buttons">
-                        <button class="time-range-btn" data-range="month">Month</button>
-                        <button class="time-range-btn" data-range="quarter">Quarter</button>
-                        <button class="time-range-btn" data-range="6months">6 Months</button>
-                        <button class="time-range-btn" data-range="year">Year</button>
-                        <button class="time-range-btn active" data-range="all">All Time</button>
-                    </div>
-                </div>
-
-                <div class="chart-container" id="sentimentChart">
-                    <canvas id="sentimentCanvas"></canvas>
                 </div>
             </section>
 

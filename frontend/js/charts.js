@@ -95,31 +95,7 @@ export function generateDoughnutChart(jsonData) {
             maintainAspectRatio: true,
             plugins: {
                 legend: {
-                    display: true,
-                    position: 'bottom',
-                    labels: {
-                        padding: 15,
-                        font: {
-                            size: 13,
-                            family: 'Inter, sans-serif'
-                        },
-                        generateLabels: function(chart) {
-                            const data = chart.data;
-                            const total = data.datasets[0].data.reduce((a, b) => a + b, 0);
-                            
-                            return data.labels.map((label, i) => {
-                                const value = data.datasets[0].data[i];
-                                const percentage = ((value / total) * 100).toFixed(1);
-                                
-                                return {
-                                    text: `${label}: ${value} (${percentage}%)`,
-                                    fillStyle: data.datasets[0].backgroundColor[i],
-                                    hidden: false,
-                                    index: i
-                                };
-                            });
-                        }
-                    }
+                    display: false
                 },
                 tooltip: {
                     callbacks: {
@@ -136,8 +112,8 @@ export function generateDoughnutChart(jsonData) {
         }
     });
     
-    // Update the category count table
-    updateCategoryTable(categoryCounts, data.reduce((a, b) => a + b, 0));
+    // Update the category count table with colors
+    updateCategoryTable(categoryCounts, data.reduce((a, b) => a + b, 0), colors, labels);
     
     console.log('🍩 Doughnut chart generated:', {
         totalCategories: labels.length,
@@ -150,20 +126,41 @@ export function generateDoughnutChart(jsonData) {
 // Update Category Table with Counts
 // ========================================
 
-export function updateCategoryTable(categoryCounts, totalReports) {
+export function updateCategoryTable(categoryCounts, totalReports, colors, labels) {
+    // Define color mapping for categories
+    const colorMap = {
+        service: '#FF6B6B',
+        delays: '#FFA07A',
+        infrastructure: '#FFD93D',
+        user: '#A8E6CF',
+        hygiene: '#87CEEB',
+        comfort: '#DDA0DD',
+        positive: '#90EE90'
+    };
+    
     // Calculate percentages and update table cells
     const categories = ['service', 'delays', 'infrastructure', 'user', 'hygiene', 'comfort', 'positive'];
     
     categories.forEach(category => {
         const countElement = document.getElementById(`count-${category}`);
+        const row = countElement ? countElement.closest('tr') : null;
+        
         if (countElement) {
             const count = categoryCounts[category] || 0;
             const percentage = totalReports > 0 ? ((count / totalReports) * 100).toFixed(1) : '0.0';
             countElement.textContent = `${count} (${percentage}%)`;
         }
+        
+        // Update the color indicator
+        if (row) {
+            const colorIndicator = row.querySelector('.color-indicator');
+            if (colorIndicator) {
+                colorIndicator.style.backgroundColor = colorMap[category];
+            }
+        }
     });
     
-    console.log('📊 Category table updated with counts');
+    console.log('📊 Category table updated with counts and colors');
 }
 
 // ========================================
@@ -263,31 +260,7 @@ export function generatePositiveDoughnutChart(jsonData) {
             maintainAspectRatio: true,
             plugins: {
                 legend: {
-                    display: true,
-                    position: 'bottom',
-                    labels: {
-                        padding: 15,
-                        font: {
-                            size: 13,
-                            family: 'Inter, sans-serif'
-                        },
-                        generateLabels: function(chart) {
-                            const chartData = chart.data;
-                            const total = chartData.datasets[0].data.reduce((a, b) => a + b, 0);
-                            
-                            return chartData.labels.map((label, i) => {
-                                const value = chartData.datasets[0].data[i];
-                                const percentage = ((value / total) * 100).toFixed(1);
-                                
-                                return {
-                                    text: `${label}: ${value} (${percentage}%)`,
-                                    fillStyle: chartData.datasets[0].backgroundColor[i],
-                                    hidden: false,
-                                    index: i
-                                };
-                            });
-                        }
-                    }
+                    display: false
                 },
                 tooltip: {
                     callbacks: {
