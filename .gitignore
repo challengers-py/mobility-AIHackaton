@@ -7,6 +7,7 @@
 .env.local
 .env.development
 .env.production
+.env.staging
 *.env
 
 # API Keys and Secrets
@@ -21,22 +22,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 venv/
 ENV/
 env/
@@ -55,11 +40,13 @@ yarn.lock
 *.swp
 *.swo
 *~
-.DS_Store
+*.iml
 
 # Logs
 logs/
 *.log
+*.tmp
+*.temp
 
 # Database
 *.db
@@ -77,12 +64,10 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
-*.tmp
 
 # Backup files
 *.bak
 *.backup
-*~
 
 # Coverage reports
 htmlcov/
@@ -94,8 +79,83 @@ coverage.xml
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Distribution / packaging
-.Python
+# Build output
 build/
+develop-eggs/
 dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
 *.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# React Native / Expo
+.expo/
+.expo-shared/
+.expo3/
+.expo-packager/
+.expo-dev/
+
+# bundler
+bundle/
+android/app/src/main/assets/index.android.bundle
+android/app/src/main/assets/index.android.bundle.meta
+
+# Transpiled files
+*.jsbundle
+*.map
+*.tsbuildinfo
+
+# iOS
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcworkspace/
+ios/*/xcuserdata/
+ios/*/xcshareddata/
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.perspectivev3
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+*.keystore
+*.jks
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+gradlew
+gradlew.bat
+
+# Watchman
+.watchmanconfig
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Coverage
+coverage/
+
+# Firebase / Google Services
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+google-services.json
+GoogleService-Info.plist
