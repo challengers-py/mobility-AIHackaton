@@ -6,6 +6,25 @@
 // Make sure to load env-loader.js and config.js before this file
 
 // ========================================
+// Mobility Insights Dashboard
+// Main JavaScript Module
+// ========================================
+
+// Import chart functions from charts module
+import {
+    generateDoughnutChart,
+    generatePositiveDoughnutChart,
+    generateSentimentTimelineChart,
+    generateStackedAreaChart,
+    generateHorizontalBarChart,
+    generateIssuesTrendChart,
+    updateCategoryTable,
+    globalSentimentData,
+    globalTopicsData,
+    globalIssuesData
+} from './charts.js';
+
+// ========================================
 // AI Hot Topic Banner Functionality
 // ========================================
 
@@ -24,6 +43,136 @@ async function loadJSONData() {
         console.warn('Could not load data.json, using mock data:', error);
         return null;
     }
+}
+
+// Helper function to load and combine all JSON datasets
+async function loadAllData() {
+    try {
+        console.log('🔄 Loading all datasets...');
+        
+        // Load all four JSON files in parallel
+        const [germanComplaintsResponse, germanPraiseResponse, spanishComplaintsResponse, spanishPraiseResponse] = await Promise.all([
+            fetch('public/german_complaint.json'),
+            fetch('public/german_praise.json'),
+            fetch('public/spanish_complaint.json'),
+            fetch('public/spanish_praise.json')
+        ]);
+        
+        // Check if all loaded successfully
+        if (!germanComplaintsResponse.ok || !germanPraiseResponse.ok || !spanishComplaintsResponse.ok || !spanishPraiseResponse.ok) {
+            throw new Error('Failed to load one or more data files');
+        }
+        
+        // Parse all JSON files
+        const [germanComplaintsData, germanPraiseData, spanishComplaintsData, spanishPraiseData] = await Promise.all([
+            germanComplaintsResponse.json(),
+            germanPraiseResponse.json(),
+            spanishComplaintsResponse.json(),
+            spanishPraiseResponse.json()
+        ]);
+        
+        console.log('✅ German complaints loaded:', germanComplaintsData.pagination?.total_items || 0, 'entries');
+        console.log('✅ German praise loaded:', germanPraiseData.pagination?.total_items || 0, 'entries');
+        console.log('✅ Spanish complaints loaded:', spanishComplaintsData.pagination?.total_items || 0, 'entries');
+        console.log('✅ Spanish praise loaded:', spanishPraiseData.pagination?.total_items || 0, 'entries');
+        
+        // Mark all German praise data entries as positive
+        const germanPraiseWithPositive = {
+            ...germanPraiseData,
+            data: (germanPraiseData.data || []).map(entry => ({
+                ...entry,
+                detected_categories: [...(entry.detected_categories || []), 'positive']
+            }))
+        };
+        
+        // Mark all Spanish praise data entries as positive
+        const spanishPraiseWithPositive = {
+            ...spanishPraiseData,
+            data: (spanishPraiseData.data || []).map(entry => ({
+                ...entry,
+                detected_categories: [...(entry.detected_categories || []), 'positive']
+            }))
+        };
+        
+        // Add positive category to German praise statistics
+        const germanPraiseStatsWithPositive = [
+            ...(germanPraiseData.statistics || []),
+            {
+                category: 'positive',
+                total_mentions: germanPraiseData.pagination?.total_items || 0
+            }
+        ];
+        
+        // Add positive category to Spanish praise statistics
+        const spanishPraiseStatsWithPositive = [
+            ...(spanishPraiseData.statistics || []),
+            {
+                category: 'positive',
+                total_mentions: spanishPraiseData.pagination?.total_items || 0
+            }
+        ];
+        
+        // Combine the datasets
+        const combinedData = {
+            status: 'success',
+            pagination: {
+                current_page: 1,
+                items_per_page: 20000,
+                total_pages: 1,
+                total_items: (germanComplaintsData.pagination?.total_items || 0) + 
+                            (germanPraiseData.pagination?.total_items || 0) +
+                            (spanishComplaintsData.pagination?.total_items || 0) +
+                            (spanishPraiseData.pagination?.total_items || 0)
+            },
+            statistics: combineStatistics([
+                germanComplaintsData.statistics || [],
+                germanPraiseStatsWithPositive,
+                spanishComplaintsData.statistics || [],
+                spanishPraiseStatsWithPositive
+            ]),
+            data: [
+                ...(germanComplaintsData.data || []),
+                ...(germanPraiseWithPositive.data || []),
+                ...(spanishComplaintsData.data || []),
+                ...(spanishPraiseWithPositive.data || [])
+            ],
+            processing_time: (germanComplaintsData.processing_time || 0) + 
+                           (germanPraiseData.processing_time || 0) +
+                           (spanishComplaintsData.processing_time || 0) +
+                           (spanishPraiseData.processing_time || 0)
+        };
+        
+        console.log('✅ Combined data ready:', combinedData.pagination.total_items, 'total entries');
+        console.log('📊 Combined statistics:', combinedData.statistics);
+        
+        return combinedData;
+    } catch (error) {
+        console.error('❌ Error loading combined data:', error);
+        // Fallback to original data only
+        return await loadJSONData();
+    }
+}
+
+// Helper function to combine statistics from multiple datasets
+function combineStatistics(statisticsArrays) {
+    const combined = {};
+    
+    // Iterate through each dataset's statistics
+    statisticsArrays.forEach(stats => {
+        stats.forEach(stat => {
+            const category = stat.category;
+            if (!combined[category]) {
+                combined[category] = {
+                    category: category,
+                    total_mentions: 0
+                };
+            }
+            combined[category].total_mentions += stat.total_mentions;
+        });
+    });
+    
+    // Convert back to array
+    return Object.values(combined);
 }
 
 async function loadHotTopic() {
@@ -190,17 +339,106 @@ function initNavigation() {
 }
 
 // ========================================
+// Initialize Time Range Selector
+// ========================================
+
+function initTimeRangeSelector() {
+    const timeRangeBtns = document.querySelectorAll('.time-range-btn');
+    
+    timeRangeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            timeRangeBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            // Get the selected range
+            const range = btn.getAttribute('data-range');
+            
+            // Regenerate chart with new time range
+            if (globalSentimentData) {
+                generateSentimentTimelineChart(globalSentimentData, range);
+            }
+        });
+    });
+    
+    console.log('⏰ Time range selector initialized');
+}
+
+// ========================================
+// Initialize Time Range Selector for Topics
+// ========================================
+
+function initTopicsTimeRangeSelector() {
+    const timeRangeBtns = document.querySelectorAll('.time-range-btn-topics');
+    
+    timeRangeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            timeRangeBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            // Get the selected range
+            const range = btn.getAttribute('data-range');
+            
+            // Regenerate chart with new time range
+            if (globalTopicsData) {
+                generateStackedAreaChart(globalTopicsData, range);
+            }
+        });
+    });
+    
+    console.log('⏰ Topics time range selector initialized');
+}
+
+// ========================================
+// Initialize Time Range Selector for Issues
+// ========================================
+
+function initIssuesTimeRangeSelector() {
+    const timeRangeBtns = document.querySelectorAll('.time-range-btn-issues');
+    
+    timeRangeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            timeRangeBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            // Get the selected range
+            const range = btn.getAttribute('data-range');
+            
+            // Regenerate chart with new time range
+            if (globalIssuesData) {
+                generateIssuesTrendChart(globalIssuesData, range);
+            }
+        });
+    });
+    
+    console.log('⏰ Issues time range selector initialized');
+}
+
+// ========================================
 // Load Data from JSON and Display
 // ========================================
 
 async function loadDashboardData() {
     try {
-        const jsonData = await loadJSONData();
+        // Load all data sources combined
+        const jsonData = await loadAllData();
         
         if (jsonData && jsonData.status === 'success') {
-            console.log('✅ Loading real data from data.json');
+            console.log('✅ Loading combined data from all sources');
+            console.log('📊 Total entries:', jsonData.pagination.total_items);
             loadRealKPIData(jsonData);
             loadTopicsData(jsonData);
+            generateStackedAreaChart(jsonData);
+            generateHorizontalBarChart(jsonData);
+            generateIssuesTrendChart(jsonData);
             loadIssuesData(jsonData);
             loadSentimentData(jsonData);
             loadRecommendations(jsonData);
@@ -243,9 +481,10 @@ function loadRealKPIData(jsonData) {
     const serviceCount = jsonData.statistics.find(s => s.category === 'service')?.total_mentions || 0;
     const delaysCount = jsonData.statistics.find(s => s.category === 'delays')?.total_mentions || 0;
     const infrastructureCount = jsonData.statistics.find(s => s.category === 'infrastructure')?.total_mentions || 0;
-    const usuarioCount = jsonData.statistics.find(s => s.category === 'usuario')?.total_mentions || 0;
+    const userCount = jsonData.statistics.find(s => s.category === 'user')?.total_mentions || 0;
     const hygieneCount = jsonData.statistics.find(s => s.category === 'hygiene')?.total_mentions || 0;
     const comfortCount = jsonData.statistics.find(s => s.category === 'comfort')?.total_mentions || 0;
+    const positiveCount = jsonData.statistics.find(s => s.category === 'positive')?.total_mentions || 0;
     const uncategorized = jsonData.statistics.find(s => s.category === 'sin_categoria')?.total_mentions || 0;
     
     // Calculate ACTIVE ISSUES based on severity thresholds
@@ -261,9 +500,10 @@ function loadRealKPIData(jsonData) {
         { name: 'service', count: serviceCount },
         { name: 'delays', count: delaysCount },
         { name: 'infrastructure', count: infrastructureCount },
-        { name: 'usuario', count: usuarioCount },
+        { name: 'user', count: userCount },
         { name: 'hygiene', count: hygieneCount },
-        { name: 'comfort', count: comfortCount }
+        { name: 'comfort', count: comfortCount },
+        { name: 'positive', count: positiveCount }
     ];
     
     allCategories.forEach(cat => {
@@ -287,21 +527,25 @@ function loadRealKPIData(jsonData) {
     
     console.log('📊 Active Issues Breakdown:', issuesBreakdown);
     
-    // Calculate sentiment (all feedback represents complaints/issues)
-    // High Impact Negative: delays, service (critical operational issues)
-    // Medium Impact Negative: infrastructure, hygiene (maintenance issues)
-    // Low Impact Negative: comfort (convenience issues)
-    // Neutral: usuario (user error, not ÖBB's fault)
-    const highImpactNegative = delaysCount + serviceCount;
-    const mediumImpactNegative = infrastructureCount + hygieneCount;
-    const lowImpactNegative = comfortCount;
-    const neutralCategories = usuarioCount;
+    // Calculate sentiment (NOW includes positive feedback!)
+    // Positive: positive category (actual positive reviews)
+    // High Severity (Negative): delays, service (critical operational issues)
+    // Medium Severity (Neutral): infrastructure, hygiene (maintenance issues)
+    // Low Severity (Minor): comfort, user (convenience issues, user errors)
+    const positiveReviews = positiveCount;
+    const highSeverityIssues = delaysCount + serviceCount;
+    const mediumSeverityIssues = infrastructureCount + hygieneCount;
+    const lowSeverityIssues = comfortCount + userCount;
     const totalCategorized = jsonData.statistics.filter(s => s.category !== 'sin_categoria')
         .reduce((sum, s) => sum + s.total_mentions, 0);
     
-    // Since all feedback is complaints, sentiment score represents issue severity distribution
-    // Lower score = more severe issues
-    const sentimentScore = Math.round((100 - ((highImpactNegative / totalCategorized) * 100)));
+    // Calculate sentiment percentages (now includes real positive feedback)
+    const positivePercent = Math.round((positiveReviews / totalCategorized) * 100);
+    const neutralPercent = Math.round((mediumSeverityIssues / totalCategorized) * 100);
+    const negativePercent = Math.round((highSeverityIssues / totalCategorized) * 100);
+    
+    // Sentiment score now represents actual positive vs negative ratio
+    const sentimentScore = positivePercent;
     
     // Update KPI cards
     document.querySelector('#kpiTotalFeedback .kpi-value').textContent = 
@@ -335,8 +579,8 @@ function loadRealKPIData(jsonData) {
     
     document.getElementById('overviewSummary').innerHTML = `
         <p>This analysis covers <strong>${totalProcessed.toLocaleString()} customer feedback entries</strong> processed in ${processingTime} seconds, identifying <strong>${totalMentions.toLocaleString()} categorized mentions</strong> across <strong>7 categories</strong>.</p>
-        <p>The most critical issue is <strong class="text-negative">${topCategory.name} with ${topCategory.count.toLocaleString()} mentions (${topCategoryPercent}%)</strong>, representing the primary concern for ÖBB customers.</p>
-        <p>${issuesSummary}, primarily related to ${issuesBreakdown.slice(0, 3).map(i => i.category).join(', ')}. <strong class="text-warning">${uncategorized.toLocaleString()} feedback entries (${uncategorizedPercent}%)</strong> remain uncategorized.</p>
+        <p>The most critical issue is <strong class="text-negative">${topCategory.name} with ${topCategory.count.toLocaleString()} mentions (${topCategoryPercent}%)</strong>, representing the primary concern for ÖBB customers. <strong class="text-positive">${positiveCount.toLocaleString()} positive reviews (${Math.round((positiveCount/totalMentions)*100)}%)</strong> highlight areas of excellence.</p>
+        <p>${issuesSummary}, primarily related to ${issuesBreakdown.slice(0, 3).map(i => i.category).join(', ')}. ${uncategorized > 0 ? `<strong class="text-warning">${uncategorized.toLocaleString()} feedback entries (${uncategorizedPercent}%)</strong> remain uncategorized.` : ''}</p>
     `;
 }
 
@@ -363,17 +607,46 @@ function loadTopicsData(jsonData) {
         const percentage = ((stat.total_mentions / totalCategorized) * 100).toFixed(1);
         const categoryName = stat.category.charAt(0).toUpperCase() + stat.category.slice(1);
         
-        // Assign colors based on severity
+        // Assign colors based on category type and severity
         let colorClass = 'text-neutral';
-        if (stat.category === 'delays') colorClass = 'text-negative';
-        else if (stat.category === 'infrastructure') colorClass = 'text-warning';
-        else if (stat.category === 'service') colorClass = 'text-warning';
+        
+        // Color coding logic:
+        // CRITICAL (Red): delays, service - Core operational issues affecting customer satisfaction
+        // WARNING (Orange): infrastructure, hygiene - Maintenance and facility issues
+        // INFO (Blue): comfort, user - User experience and personal items
+        // POSITIVE (Green): positive - Positive feedback
+        
+        switch(stat.category) {
+            case 'delays':
+                colorClass = 'text-negative'; // Red - Critical operational issue
+                break;
+            case 'service':
+                colorClass = 'text-negative'; // Red - Critical customer service issue
+                break;
+            case 'infrastructure':
+                colorClass = 'text-warning'; // Orange - Important maintenance issue
+                break;
+            case 'hygiene':
+                colorClass = 'text-warning'; // Orange - Important cleanliness issue
+                break;
+            case 'comfort':
+                colorClass = 'text-info'; // Blue - User experience issue
+                break;
+            case 'user':
+                colorClass = 'text-info'; // Blue - User-related issue
+                break;
+            case 'positive':
+                colorClass = 'text-positive'; // Green - Positive feedback
+                break;
+            default:
+                colorClass = 'text-neutral';
+        }
         
         const card = document.createElement('div');
-        card.className = 'insight-card';
+        card.className = 'insight-card topic-stat-card';
         card.innerHTML = `
             <h4 class="card-subtitle">${categoryName}</h4>
-            <p class="sentiment-percentage ${colorClass}" style="font-size: 2rem; margin: 0.5rem 0;">
+            <p class="sentiment-percentage ${colorClass}" style="font-size: 2rem; margin: 0.5rem 0; font-weight: 700;">
                 ${stat.total_mentions.toLocaleString()}
             </p>
             <p style="color: var(--dark-gray); font-size: 0.875rem;">
@@ -526,39 +799,17 @@ function loadIssuesData(jsonData) {
 // ========================================
 
 function loadSentimentData(jsonData) {
-    // Calculate sentiment distribution
-    const totalMentions = jsonData.statistics
-        .filter(s => s.category !== 'sin_categoria')
-        .reduce((sum, s) => sum + s.total_mentions, 0);
+    // Generate Doughnut Chart for category distribution
+    generateDoughnutChart(jsonData);
     
-    const serviceCount = jsonData.statistics.find(s => s.category === 'service')?.total_mentions || 0;
-    const delaysCount = jsonData.statistics.find(s => s.category === 'delays')?.total_mentions || 0;
-    const infrastructureCount = jsonData.statistics.find(s => s.category === 'infrastructure')?.total_mentions || 0;
-    const usuarioCount = jsonData.statistics.find(s => s.category === 'usuario')?.total_mentions || 0;
-    const hygieneCount = jsonData.statistics.find(s => s.category === 'hygiene')?.total_mentions || 0;
-    const comfortCount = jsonData.statistics.find(s => s.category === 'comfort')?.total_mentions || 0;
+    // Generate Positive Feedback Distribution Chart
+    generatePositiveDoughnutChart(jsonData);
     
-    // ALL feedback represents complaints and issues (no positive feedback)
-    // Categorize by severity impact:
-    // High Severity: delays, service, infrastructure (critical operational problems)
-    // Medium Severity: hygiene, comfort (quality/maintenance issues)
-    // Low Severity: usuario (user error, not ÖBB's direct fault)
-    const highSeverity = delaysCount + serviceCount + infrastructureCount;
-    const mediumSeverity = hygieneCount + comfortCount;
-    const lowSeverity = usuarioCount;
-    
-    const highPercent = ((highSeverity / totalMentions) * 100).toFixed(1);
-    const mediumPercent = ((mediumSeverity / totalMentions) * 100).toFixed(1);
-    const lowPercent = ((lowSeverity / totalMentions) * 100).toFixed(1);
-    
-    // Update sentiment percentages (now representing severity levels)
-    document.querySelector('#sentimentNegative .sentiment-percentage').textContent = `${highPercent}%`;
-    document.querySelector('#sentimentNeutral .sentiment-percentage').textContent = `${mediumPercent}%`;
-    document.querySelector('#sentimentPositive .sentiment-percentage').textContent = `${lowPercent}%`;
+    // Generate temporal chart showing category trends over time
+    generateSentimentTimelineChart(jsonData);
 }
 
 // ========================================
-// Load Mock KPI Data (Fallback)
 // ========================================
 
 function loadMockKPIData() {
@@ -623,13 +874,23 @@ function loadRecommendations(jsonData) {
             });
         }
         
-        if (stat.category === 'usuario' && stat.total_mentions > 200) {
+        if (stat.category === 'user' && stat.total_mentions > 200) {
             recommendations.push({
                 priority: 'MEDIUM',
                 category: 'Lost & Found',
                 title: 'Improve Lost & Found Services',
                 description: `${stat.total_mentions} user-related issues (primarily lost items) reported. Enhance the lost and found system with real-time tracking, digital inventory, and faster response times. Consider implementing QR code tagging system for found items.`,
                 impact: 'Medium - Better user experience and trust'
+            });
+        }
+        
+        if (stat.category === 'positive' && stat.total_mentions > 100) {
+            recommendations.push({
+                priority: 'LOW',
+                category: 'Best Practices',
+                title: 'Scale Successful Service Elements',
+                description: `${stat.total_mentions} positive reviews received! Analyze what's working well (staff friendliness, punctuality on certain routes, clean facilities) and replicate these practices across all services. Use positive feedback in training programs.`,
+                impact: 'Low - Reinforce strengths, boost team morale'
             });
         }
         
@@ -706,6 +967,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize all functionality
     initNavigation();
+    initTimeRangeSelector(); // Initialize time range filter buttons
+    initTopicsTimeRangeSelector(); // Initialize topics time range filter buttons
+    initIssuesTimeRangeSelector(); // Initialize issues time range filter buttons
     loadHotTopic(); // Load the AI hot topic
     loadDashboardData();
     
