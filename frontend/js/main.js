@@ -336,6 +336,42 @@ function initNavigation() {
             }
         }
     });
+    
+    // Handle clickable KPI cards
+    const clickableKPIs = document.querySelectorAll('.kpi-card-clickable');
+    clickableKPIs.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = card.getAttribute('data-section');
+            
+            // Update active nav link
+            navLinks.forEach(l => l.classList.remove('active'));
+            const targetNavLink = document.querySelector(`.nav-link[data-section="${targetSection}"]`);
+            if (targetNavLink) {
+                targetNavLink.classList.add('active');
+            }
+            
+            // Show target section
+            sections.forEach(section => {
+                if (section.id === targetSection) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+            
+            // Close sidebar on mobile
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+            }
+            
+            // Smooth scroll to top of main content
+            document.querySelector('.main-content').scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
 // ========================================
@@ -423,6 +459,34 @@ function initIssuesTimeRangeSelector() {
 }
 
 // ========================================
+// Initialize Time Range Selector for Ranking
+// ========================================
+
+function initRankingTimeRangeSelector() {
+    const timeRangeBtns = document.querySelectorAll('.time-range-btn-ranking');
+    
+    timeRangeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            timeRangeBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            // Get the selected range
+            const range = btn.getAttribute('data-range');
+            
+            // Regenerate chart with new time range
+            if (globalTopicsData) {
+                generateHorizontalBarChart(globalTopicsData, range);
+            }
+        });
+    });
+    
+    console.log('⏰ Ranking time range selector initialized');
+}
+
+// ========================================
 // Load Data from JSON and Display
 // ========================================
 
@@ -434,7 +498,7 @@ async function loadDashboardData() {
         if (jsonData && jsonData.status === 'success') {
             console.log('✅ Loading combined data from all sources');
             console.log('📊 Total entries:', jsonData.pagination.total_items);
-            loadRealKPIData(jsonData);
+            await loadRealKPIData(jsonData); // Now async
             loadTopicsData(jsonData);
             generateStackedAreaChart(jsonData);
             generateHorizontalBarChart(jsonData);
@@ -467,10 +531,106 @@ async function loadDashboardData() {
 }
 
 // ========================================
+// Generate AI-Powered Summary using Gemini
+// ========================================
+
+async function generateAISummary(jsonData) {
+    try {
+        // Prepare comprehensive data for analysis
+        const totalProcessed = jsonData.pagination?.total_items || jsonData.total_rows_processed || 5000;
+        const totalMentions = jsonData.statistics.reduce((sum, cat) => sum + cat.total_mentions, 0);
+        
+        // Get category statistics
+        const categoryStats = jsonData.statistics
+            .filter(s => s.category !== 'sin_categoria')
+            .sort((a, b) => b.total_mentions - a.total_mentions);
+        
+        // Calculate percentages
+        const statsWithPercentages = categoryStats.map(stat => ({
+            category: stat.category,
+            mentions: stat.total_mentions,
+            percentage: ((stat.total_mentions / totalMentions) * 100).toFixed(1)
+        }));
+        
+        // Get sample feedback subjects from top categories
+        const topCategorySamples = {};
+        categoryStats.slice(0, 3).forEach(stat => {
+            topCategorySamples[stat.category] = jsonData.data
+                .filter(item => item.detected_categories.includes(stat.category))
+                .slice(0, 5)
+                .map(item => item.subject);
+        });
+        
+        // Create comprehensive prompt for Gemini
+        const prompt = `You are a senior data analyst for ÖBB (Austrian Federal Railways). Generate a CONCISE executive summary (max 150 words) for leadership teams.
+
+DATA SNAPSHOT:
+- ${totalProcessed.toLocaleString()} feedback entries analyzed
+- ${totalMentions.toLocaleString()} categorized mentions
+- Time: Last 12 months
+
+BREAKDOWN:
+${statsWithPercentages.slice(0, 5).map(s => `${s.category.toUpperCase()}: ${s.mentions.toLocaleString()} (${s.percentage}%)`).join(' | ')}
+
+TOP 3 CONCERNS:
+${Object.entries(topCategorySamples).slice(0, 3).map(([cat, samples]) => 
+    `${cat.toUpperCase()}: ${samples.slice(0, 2).join('; ')}`
+).join('\n')}
+
+GENERATE:
+1. EXECUTIVE INSIGHT (2 sentences): Most critical finding + business impact
+2. KEY PRIORITIES (3 bullets): Top issues requiring immediate action
+
+RULES:
+- Use HTML: <h4>, <p>, <ul>, <li>, <strong>
+- NO triple backticks, NO code blocks
+- Start directly with content, NO title/header
+- Be direct, actionable, business-focused
+- Max 150 words total`;
+
+        const response = await fetch(CONFIG.GEMINI_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-goog-api-key': CONFIG.GEMINI_API_KEY
+            },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [{
+                        text: prompt
+                    }]
+                }]
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`Gemini API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const generatedSummary = data.candidates[0].content.parts[0].text;
+        
+        // Clean up the generated summary
+        let cleanedSummary = generatedSummary
+            .replace(/```html\n?/g, '')  // Remove ```html
+            .replace(/```\n?/g, '')      // Remove closing ```
+            .replace(/^#+\s+.*$/gm, '')  // Remove markdown headers
+            .trim();
+        
+        console.log('✅ AI-powered summary generated successfully');
+        return cleanedSummary;
+        
+    } catch (error) {
+        console.error('❌ Error generating AI summary:', error);
+        return null;
+    }
+}
+
+// ========================================
 // Load Real KPI Data from JSON
 // ========================================
 
-function loadRealKPIData(jsonData) {
+async function loadRealKPIData(jsonData) {
     // Calculate total mentions
     const totalMentions = jsonData.statistics.reduce((sum, cat) => sum + cat.total_mentions, 0);
     
@@ -544,21 +704,18 @@ function loadRealKPIData(jsonData) {
     const neutralPercent = Math.round((mediumSeverityIssues / totalCategorized) * 100);
     const negativePercent = Math.round((highSeverityIssues / totalCategorized) * 100);
     
-    // Sentiment score now represents actual positive vs negative ratio
-    const sentimentScore = positivePercent;
+    // Critical Insights: Show percentage of critical/negative feedback (inverse of positive)
+    const criticalInsightsScore = 100 - positivePercent;
     
     // Update KPI cards
     document.querySelector('#kpiTotalFeedback .kpi-value').textContent = 
         totalProcessed.toLocaleString();
     
     document.querySelector('#kpiAvgSentiment .kpi-value').textContent = 
-        `${sentimentScore}%`;
+        `${criticalInsightsScore}%`;
     
     document.querySelector('#kpiActiveIssues .kpi-value').textContent = 
         activeIssuesCount;
-    
-    document.querySelector('#kpiTopTopics .kpi-value').textContent = 
-        totalMentions.toLocaleString();
 
     // Update overview summary with active issues details
     const criticalIssues = issuesBreakdown.filter(i => i.level === 'CRITICAL');
@@ -577,11 +734,23 @@ function loadRealKPIData(jsonData) {
     
     const processingTime = jsonData.processing_time ? jsonData.processing_time.toFixed(4) : '0.00';
     
-    document.getElementById('overviewSummary').innerHTML = `
-        <p>This analysis covers <strong>${totalProcessed.toLocaleString()} customer feedback entries</strong> processed in ${processingTime} seconds, identifying <strong>${totalMentions.toLocaleString()} categorized mentions</strong> across <strong>7 categories</strong>.</p>
-        <p>The most critical issue is <strong class="text-negative">${topCategory.name} with ${topCategory.count.toLocaleString()} mentions (${topCategoryPercent}%)</strong>, representing the primary concern for ÖBB customers. <strong class="text-positive">${positiveCount.toLocaleString()} positive reviews (${Math.round((positiveCount/totalMentions)*100)}%)</strong> highlight areas of excellence.</p>
-        <p>${issuesSummary}, primarily related to ${issuesBreakdown.slice(0, 3).map(i => i.category).join(', ')}. ${uncategorized > 0 ? `<strong class="text-warning">${uncategorized.toLocaleString()} feedback entries (${uncategorizedPercent}%)</strong> remain uncategorized.` : ''}</p>
-    `;
+    // Generate AI-powered summary
+    const summaryElement = document.getElementById('overviewSummary');
+    summaryElement.innerHTML = '<p><em>Generating AI-powered analysis...</em></p>';
+    
+    const aiSummary = await generateAISummary(jsonData);
+    
+    if (aiSummary) {
+        // Use AI-generated summary
+        summaryElement.innerHTML = aiSummary;
+    } else {
+        // Fallback to static summary
+        document.getElementById('overviewSummary').innerHTML = `
+            <p>This analysis covers <strong>${totalProcessed.toLocaleString()} customer feedback entries</strong> processed in ${processingTime} seconds, identifying <strong>${totalMentions.toLocaleString()} categorized mentions</strong> across <strong>7 categories</strong>.</p>
+            <p>The most critical issue is <strong class="text-negative">${topCategory.name} with ${topCategory.count.toLocaleString()} mentions (${topCategoryPercent}%)</strong>, representing the primary concern for ÖBB customers. <strong class="text-positive">${positiveCount.toLocaleString()} positive reviews (${Math.round((positiveCount/totalMentions)*100)}%)</strong> highlight areas of excellence.</p>
+            <p>${issuesSummary}, primarily related to ${issuesBreakdown.slice(0, 3).map(i => i.category).join(', ')}. ${uncategorized > 0 ? `<strong class="text-warning">${uncategorized.toLocaleString()} feedback entries (${uncategorizedPercent}%)</strong> remain uncategorized.` : ''}</p>
+        `;
+    }
 }
 
 // ========================================
@@ -817,7 +986,6 @@ function loadMockKPIData() {
     document.querySelector('#kpiTotalFeedback .kpi-value').textContent = '5,000';
     document.querySelector('#kpiAvgSentiment .kpi-value').textContent = '68%';
     document.querySelector('#kpiActiveIssues .kpi-value').textContent = '4';
-    document.querySelector('#kpiTopTopics .kpi-value').textContent = '5,370';
 
     // Update overview summary
     document.getElementById('overviewSummary').innerHTML = `
@@ -970,6 +1138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTimeRangeSelector(); // Initialize time range filter buttons
     initTopicsTimeRangeSelector(); // Initialize topics time range filter buttons
     initIssuesTimeRangeSelector(); // Initialize issues time range filter buttons
+    initRankingTimeRangeSelector(); // Initialize ranking time range filter buttons
     loadHotTopic(); // Load the AI hot topic
     loadDashboardData();
     

@@ -113,33 +113,24 @@
                             <p class="kpi-value">--</p>
                         </div>
                     </div>
-                    <div class="kpi-card" id="kpiAvgSentiment">
+                    <a href="#sentiment-trends" class="kpi-card kpi-card-clickable" id="kpiAvgSentiment" data-section="sentiment-trends">
                         <div class="kpi-icon">
                             <img src="assets/mood-smile-beam.svg" alt="Average Sentiment" width="40" height="40">
                         </div>
                         <div class="kpi-content">
-                            <h3 class="kpi-label">Avg. Sentiment</h3>
+                            <h3 class="kpi-label">Critical Insights</h3>
                             <p class="kpi-value">--</p>
                         </div>
-                    </div>
-                    <div class="kpi-card" id="kpiActiveIssues">
+                    </a>
+                    <a href="#topic-evolution" class="kpi-card kpi-card-clickable" id="kpiActiveIssues" data-section="topic-evolution">
                         <div class="kpi-icon">
                             <img src="assets/bell-ringing.svg" alt="Active Issues" width="40" height="40">
                         </div>
                         <div class="kpi-content">
-                            <h3 class="kpi-label">Active Issues</h3>
+                            <h3 class="kpi-label">Active Categories</h3>
                             <p class="kpi-value">--</p>
                         </div>
-                    </div>
-                    <div class="kpi-card" id="kpiTopTopics">
-                        <div class="kpi-icon">
-                            <img src="assets/tag.svg" alt="Total Mentions" width="40" height="40">
-                        </div>
-                        <div class="kpi-content">
-                            <h3 class="kpi-label">Total Mentions</h3>
-                            <p class="kpi-value">--</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="summary-container" id="summaryContainer">
@@ -282,6 +273,17 @@
                     <p class="section-description">Most frequent topics in customer feedback</p>
                 </div>
 
+                <div class="time-range-selector">
+                    <label class="time-range-label">Time Range:</label>
+                    <div class="time-range-buttons">
+                        <button class="time-range-btn-ranking" data-range="month">Month</button>
+                        <button class="time-range-btn-ranking" data-range="quarter">Quarter</button>
+                        <button class="time-range-btn-ranking" data-range="6months">6 Months</button>
+                        <button class="time-range-btn-ranking" data-range="year">Year</button>
+                        <button class="time-range-btn-ranking active" data-range="all">All Time</button>
+                    </div>
+                </div>
+
                 <div class="chart-container" id="topTopicsChart" style="min-height: 450px;">
                     <canvas id="horizontalBarCanvas"></canvas>
                 </div>
@@ -365,7 +367,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 ÖBB Mobility Insights Dashboard | AI Hackathon Project</p>
+            <p>2025 ÖBB Mobility Insights Dashboard | AI Hackathon Project</p>
             <p class="footer-meta">Data updated: <span id="lastUpdated">--</span></p>
         </div>
     </footer>

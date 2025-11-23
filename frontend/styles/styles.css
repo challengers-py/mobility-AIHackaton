@@ -513,6 +513,35 @@ button {
     transform: scale(1.1);
 }
 
+/* Clickable KPI Cards */
+.kpi-card-clickable {
+    cursor: pointer;
+    position: relative;
+}
+
+.kpi-card-clickable::after {
+    content: '→';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-red);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.kpi-card-clickable:hover::after {
+    opacity: 1;
+    right: 1rem;
+}
+
+.kpi-card-clickable:hover {
+    border-color: var(--primary-red);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(227, 6, 19, 0.15);
+}
+
 .kpi-content {
     flex: 1;
 }
@@ -568,6 +597,88 @@ button {
     font-size: 0.95rem;
     color: var(--dark-gray);
     line-height: 1.6;
+}
+
+/* AI-Generated Summary Styles */
+#overviewSummary {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+#overviewSummary p {
+    margin-bottom: 1.25rem;
+    color: var(--very-dark-gray);
+}
+
+#overviewSummary strong {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+#overviewSummary ul {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+#overviewSummary li {
+    margin-bottom: 0.875rem;
+    color: var(--very-dark-gray);
+    padding-left: 1.75rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+#overviewSummary li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#overviewSummary h3,
+#overviewSummary h4 {
+    color: var(--very-dark-gray);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#overviewSummary h3:first-child,
+#overviewSummary h4:first-child {
+    margin-top: 0;
+}
+
+#overviewSummary em {
+    color: var(--dark-gray);
+    font-style: italic;
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--light-gray);
+    border-left: 3px solid var(--neutral);
+    border-radius: var(--radius-sm);
+    margin: 1rem 0;
+}
+
+/* Summary Card Enhancement */
+.summary-container .insight-card {
+    border: 2px solid var(--medium-gray);
+    background: linear-gradient(to bottom, var(--white) 0%, #fafafa 100%);
+}
+
+.summary-container .card-title {
+    color: var(--very-dark-gray);
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 /* ========================================
@@ -866,6 +977,47 @@ button {
 }
 
 .time-range-btn-issues:active {
+    transform: scale(0.98);
+}
+
+/* Time Range Buttons for Ranking Chart */
+.time-range-btn-ranking {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--medium-gray);
+    background: var(--white);
+    color: var(--dark-gray);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.time-range-btn-ranking:hover {
+    border-color: var(--primary-red);
+    color: var(--primary-red);
+    background: rgba(227, 6, 19, 0.05);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time-range-btn-ranking.active {
+    background: var(--primary-red);
+    color: var(--white);
+    border-color: var(--primary-red);
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(227, 6, 19, 0.3);
+    transform: translateY(-1px);
+}
+
+.time-range-btn-ranking.active:hover {
+    background: #c70512;
+    border-color: #c70512;
+    box-shadow: 0 4px 10px rgba(227, 6, 19, 0.4);
+}
+
+.time-range-btn-ranking:active {
     transform: scale(0.98);
 }
 
